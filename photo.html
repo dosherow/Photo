@@ -36,8 +36,8 @@ body {
     grid-column-end: span 1;
     grid-row-start: row1;
     grid-row-end: span 1;
-		border-right: 1px solid #bb3051;
-		border-bottom: 1px solid #bb3051;
+		border-right: 1px solid rgba(222, 89, 152, 1);
+		border-bottom: 1px solid rgba(222, 89, 152, 1);
 }
 
 .grid-item-2 {
@@ -45,8 +45,8 @@ body {
     grid-column-end: span 1;
     grid-row-start: row1;
     grid-row-end: span 1;
-		border-right: 1px solid #bb3051;
-		border-bottom: 1px solid #bb3051;
+		border-right: 1px solid rgba(222, 89, 152, 1);
+		border-bottom: 1px solid rgba(222, 89, 152, 1);
 }
 
 .grid-item-3 {
@@ -54,7 +54,7 @@ body {
     grid-column-end: span 1;
     grid-row-start: row1;
     grid-row-end: span 1;
-		border-bottom: 1px solid #bb3051;
+		border-bottom: 1px solid rgba(222, 89, 152, 1);
 }
 
 .grid-item-4 {
@@ -62,8 +62,8 @@ body {
     grid-column-end: span 1;
     grid-row-start: row2;
     grid-row-end: span 1;
-		border-right: 1px solid #bb3051;
-		border-bottom: 1px solid #bb3051;
+		border-right: 1px solid rgba(222, 89, 152, 1);
+		border-bottom: 1px solid rgba(222, 89, 152, 1);
 }
 
 .grid-item-5 {
@@ -71,8 +71,8 @@ body {
     grid-column-end: span 1;
     grid-row-start: row2;
     grid-row-end: span 1;
-		border-right: 1px solid #bb3051;
-		border-bottom: 1px solid #bb3051;
+		border-right: 1px solid rgba(222, 89, 152, 1);
+		border-bottom: 1px solid rgba(222, 89, 152, 1);
 }
 
 .grid-item-6 {
@@ -80,7 +80,7 @@ body {
     grid-column-end: span 1;
     grid-row-start: row2;
     grid-row-end: span 1;
-		border-bottom: 1px solid #bb3051;
+		border-bottom: 1px solid rgba(222, 89, 152, 1);
 }
 
 .grid-item-7 {
@@ -88,7 +88,7 @@ body {
     grid-column-end: span 1;
     grid-row-start: row3;
     grid-row-end: span 1;
-		border-right: 1px solid #bb3051;
+		border-right: 1px solid rgba(222, 89, 152, 1);
 }
 
 .grid-item-8 {
@@ -96,7 +96,7 @@ body {
     grid-column-end: span 1;
     grid-row-start: row3;
     grid-row-end: span 1;
-		border-right: 1px solid #bb3051;
+		border-right: 1px solid rgba(222, 89, 152, 1);
 }
 
 .grid-item-9 {
@@ -122,10 +122,9 @@ body {
 
 .grid-2 div {
   height: 8.33vw;
-	border-right: 1px solid rgba(187, 48, 81, 0.2);
-	border-bottom: 1px solid rgba(187, 48, 81, 0.2);
+	border-right: 1px solid rgba(222, 89, 152, .2);
+	border-bottom: 1px solid rgba(222, 89, 152, .2);
 }
-
 
 @media only screen and (min-width: 500px) and (max-width: 527px) {
 		.grid-2 div:nth-child(-n) {
@@ -205,18 +204,6 @@ body {
 		}
  }
 
- /* .photo1 {
-	background-image: url("travisscott2.jpg");
-	background-repeat: no-repeat;
-  background-size: cover; 
-	position: absolute;
-	top: 8.33vw;
-	left: 8.33vw;
-	width: 66.64vw;
-	height: 66.64vh;
-	z-index: -99;
-} */
-
 #box {
   position: relative;
 }
@@ -224,7 +211,6 @@ body {
 #box img {
   display: block;
 	transition: 0.8s;
-	z-index: -1;
 }
 
 #box .laflame {
@@ -233,21 +219,33 @@ body {
   left: 8.33vw;
   width: 58.31vw;
   height: auto;
-	transition: 0.8s ease-in;
-	outline: 1px transparent red;
+	transition: 0.4s ease-in;
+	outline: .01px solid rgba(222, 89, 152, .1);
+	z-index: 1;
+	cursor: pointer;
 }
 
 #box .laflame:hover {
+	outline: 50px solid rgba(222, 89, 152, 1);
 	transform: scale(.95);
-  outline: 50px solid red;
 }
 
-#box .laflame:hover img {
-	outline: 50px solid red;
+#box .laflame:hover + .img-title {
+	color: rgba(222, 89, 152, 1);
+}
+
+#box .img-title:hover {
+	color: rgba(222, 89, 152, 1);
+}
+
+#box .img-title:hover ~ .laflame {
+	outline: 50px solid rgba(222, 89, 152, 1);
+	transform: scale(.95);
 }
 
 #box .img-title {
 	position: absolute;
+	cursor: pointer;
 	line-height: 8.8vh;
 	top: 8.33vw;
 	left: 75vw;
@@ -256,7 +254,9 @@ body {
 	font-size: 5.4em;
 	color: black;
 	letter-spacing: 0.05em;
+	transition: 0.4s ease-in-out;
 	transform: rotate(-90deg);
+	z-index: 1;
 }
 
  @media only screen and (max-width: 1200px) {
@@ -293,13 +293,10 @@ body {
 <body>
 <div class="container">
 		<div id="box">
-				
 				<img src="travisscott2.jpg" class="laflame">
 				<p class="img-title">Travis Scott</p>
-				
-			</div>
+		</div>
 	<div class="grid">
-			<!-- <div class="photo1"></div> -->
 		<div class="grid-item-1"></div>
 		<div class="grid-item-2"></div>
 		<div class="grid-item-3"></div>
