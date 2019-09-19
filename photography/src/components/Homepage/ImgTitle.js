@@ -12,4 +12,32 @@ export default styled.p`
     color: black;
     letter-spacing: 0.05em;
     transform: rotate(-90deg);
+    z-index: 1;
+    @media only screen and (max-width: 1200px) {
+		{
+			font-size: 4.6em;
+			line-height: 8vh;
+		}
+    }
+
+    @media only screen and (min-width: 992px) and (max-width: 1199px) {
+		{
+			font-size: 4em;
+			line-height: 7.2vh;
+		}
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+		{
+			font-size: 3.2em;
+			line-height: 6.4vh;
+		}
+    }
+
+    @media only screen and (max-width: 767px) {
+		{
+			font-size: 2.4em;
+			line-height: 5vh;
+		}
+    }
 `
