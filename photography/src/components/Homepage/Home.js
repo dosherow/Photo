@@ -2,7 +2,6 @@ import React from 'react';
 
 import Container from './Container';
 import Box from './Box';
-import Hero from './Hero';
 import ImgTitle from './ImgTitle';
 import Grid1 from './Grid1';
 import GridItem1 from './GridItem1';
@@ -15,12 +14,15 @@ import GridItem7 from './GridItem7';
 import GridItem8 from './GridItem8';
 import GridItem9 from './GridItem9';
 import Grid2 from './Grid2';
+import Travis from './travisscott2.jpg';
 
 export default function Home() {
     return (
         <Container>
             <Box>
-                <Hero />
+                <div>
+                    <img src={Travis} alt="la flame"/>
+                </div>
                 <ImgTitle>Travis Scott</ImgTitle>
             </Box>
             <Grid1>

@@ -208,10 +208,10 @@ body {
   position: relative;
 }
 
-#box img {
+/* #box img {
   display: block;
 	transition: 0.8s;
-}
+} */
 
 #box .laflame {
   position: absolute;
@@ -226,21 +226,38 @@ body {
 }
 
 #box .laflame:hover {
-	outline: 50px solid rgba(222, 89, 152, 1);
+	outline: 22.2px solid rgba(222, 89, 152, 1);
 	transform: scale(.95);
 }
 
 #box .laflame:hover + .img-title {
 	color: rgba(222, 89, 152, 1);
+	text-shadow: 0 1px 0 #4f0099, 0 2px 0 #4c0094, 0 3px 0 #4a008f, 
+  0 4px 0 #450085, 0 5px 0 #3f007a, 0 6px 0 #3a0070, 
+  0 7px 0 #350066, 0 8px 0 #2f005c, 0 9px 0 #28004d, 
+  0 0 5px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.2), 
+  0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.2);
+	line-height: 10.2vh;
 }
 
 #box .img-title:hover {
 	color: rgba(222, 89, 152, 1);
+	text-shadow: 0 1px 0 #4f0099, 0 2px 0 #4c0094, 0 3px 0 #4a008f, 
+  0 4px 0 #450085, 0 5px 0 #3f007a, 0 6px 0 #3a0070, 
+  0 7px 0 #350066, 0 8px 0 #2f005c, 0 9px 0 #28004d, 
+  0 0 5px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.2), 
+  0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.2);
+	line-height: 10.2vh;
 }
 
-#box .img-title:hover ~ .laflame {
-	outline: 50px solid rgba(222, 89, 152, 1);
+#box .img-title:hover ~ #box .laflame {
+	outline: 22.2px solid rgba(222, 89, 152, 1);
 	transform: scale(.95);
+	text-shadow: 0 1px 0 #4f0099, 0 2px 0 #4c0094, 0 3px 0 #4a008f, 
+  0 4px 0 #450085, 0 5px 0 #3f007a, 0 6px 0 #3a0070, 
+  0 7px 0 #350066, 0 8px 0 #2f005c, 0 9px 0 #28004d, 
+  0 0 5px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.2), 
+  0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 #box .img-title {
