@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component, useState } from 'react';
 
 import Container from './Container';
 import Box from './Box';
@@ -15,15 +15,38 @@ import GridItem8 from './GridItem8';
 import GridItem9 from './GridItem9';
 import Grid2 from './Grid2';
 import Travis from './travisscott2.jpg';
+import Bryson from './brysontiller3.jpg';
+import Next from './Next';
 
-export default function Home() {
+class Home extends Component {
+    state = {
+        hero: [
+            {img: Travis, title: "Travis Scott"},
+            {img: Bryson, title: "Bryson Tiller"}
+        ]
+    };
+
+    nextProject = () => {
+        const newState = this.state.hero.map((hero) => {
+            const nextHero = hero;
+            nextHero.img = this.state.hero[1].img;
+            nextHero.title = this.state.hero[1].title;
+            return nextHero;
+        });
+        this.setState({
+            newState
+        })
+    }
+
+    render() {
     return (
         <Container>
             <Box>
                 <div>
-                    <img src={Travis} alt="la flame"/>
+                    <img src={this.state.hero[0].img} alt="la flame"/>
                 </div>
-                <ImgTitle>Travis Scott</ImgTitle>
+                <ImgTitle>{this.state.hero[0].title}</ImgTitle>
+                <Next onClick={this.nextProject}>Next</Next>
             </Box>
             <Grid1>
                 <GridItem1 />
@@ -256,4 +279,7 @@ export default function Home() {
             </Grid2>
         </Container>
     )
+    }
 }
+
+export default Home;
