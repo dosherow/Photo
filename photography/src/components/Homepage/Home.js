@@ -23,13 +23,13 @@ import ImgTitle9 from './ImgTitle9';
 import ImgTitle10 from './ImgTitle10';
 import Travis from './imgs/travisscott2.jpg';
 import Bryson from './imgs/brysontiller3.jpg';
-import Mura from './imgs/muramasa6.png';
-import Anderson from './imgs/andersonpaak3.png';
-import Majid from './imgs/majidjordan2.png';
-import Black from './imgs/6lack6.png';
-import KK from './imgs/kingkrule1.png';
+import Mura from './imgs/muramasa6.jpg';
+import Anderson from './imgs/andersonpaak3.jpg';
+import Majid from './imgs/majidjordan2.jpg';
+import Black from './imgs/6lack6.jpg';
+import KK from './imgs/kingkrule1.jpg';
 import Earl from './imgs/earlsweatshirt1.jpg';
-import Mac from './imgs/macdemarco2.png';
+import Mac from './imgs/macdemarco2.jpg';
 import Vince from './imgs/vincestaples.jpg';
 
 class Home extends Component {
