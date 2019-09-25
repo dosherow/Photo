@@ -11,6 +11,8 @@ import Box7 from './Box7';
 import Box8 from './Box8';
 import Box9 from './Box9';
 import Box10 from './Box10';
+import Box11 from './Box11';
+import Box12 from './Box12';
 import ImgTitle1 from './ImgTitle1';
 import ImgTitle2 from './ImgTitle2';
 import ImgTitle3 from './ImgTitle3';
@@ -21,6 +23,8 @@ import ImgTitle7 from './ImgTitle7';
 import ImgTitle8 from './ImgTitle8';
 import ImgTitle9 from './ImgTitle9';
 import ImgTitle10 from './ImgTitle10';
+import ImgTitle11 from './ImgTitle11';
+import ImgTitle12 from './ImgTitle12';
 import Travis from './imgs/travisscott2.jpg';
 import Bryson from './imgs/brysontiller3.jpg';
 import Mura from './imgs/muramasa6.jpg';
@@ -31,6 +35,8 @@ import KK from './imgs/kingkrule1.jpg';
 import Earl from './imgs/earlsweatshirt1.jpg';
 import Mac from './imgs/macdemarco2.jpg';
 import Vince from './imgs/vincestaples.jpg';
+import Moses from './imgs/mosessumney3.jpg';
+import Jcole from './imgs/jcole2.jpg';
 
 class Home extends Component {
     render() {
@@ -96,6 +102,19 @@ class Home extends Component {
 			<ImgTitle10>
 					<span>Mac Demarco</span>
 			</ImgTitle10>
+			<Box11>
+                <img src= {Jcole} alt="J Cole"/>
+            </Box11>
+			<ImgTitle11>
+					<span>J. Cole</span>
+			</ImgTitle11>
+			<Box12>
+                <img src= {Moses} alt="Moses Sumney"/>
+            </Box12>
+			<ImgTitle12>
+					<span>Moses Sumney</span>
+			</ImgTitle12>
+			
 			
 			
         </Container>

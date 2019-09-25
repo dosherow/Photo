@@ -2,7 +2,8 @@ import styled from 'styled-components';
 
 export default styled.div`
     position: relative;
-    top: 16.66vw;
+    left: 8.33vw;
+    top: -74.97vw;
     width: 41.65vw;
     height: auto;
     cursor: pointer;
