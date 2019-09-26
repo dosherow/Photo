@@ -349,557 +349,327 @@ const Home = () => {
     	background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
 	`;
 
-	// box1 styling 
+	// consistent img div box & text styling to shorten code / make more readable
 
-	const box1 = css`
+	const imgStyle = css`
 		position: relative;
-		top: 16.66vw;
-		width: 41.65vw;
+		display: inline-block;
+		width: 100%;
 		height: auto;
-		cursor: pointer;
-		transition: 0.4s ease-in;
-		box-shadow: ${boxShadow1};
-		overflow: hidden;
-		display: block;
+		z-index: -1;
+		transition: 0.35s ease-in-out;
+		transform: matrix(1, 0, 0, 1, 0, 0);
 		:hover img {
 			transform: matrix(1.1, 0, 0, 1.1, 0, 0);
-			${'' /* opacity: 1; */}
-		}
-
-		& img {
-			position: relative;
-			display: inline-block;
-			width: 100%;
-			height: auto;
-			z-index: -1;
-			transition: 0.35s ease-in-out;
-			transform: matrix(1, 0, 0, 1, 0, 0);
-			${'' /* opacity: .9; */}
 		}
 	`;
 
-	const imgTitle1 = css`
+	const boxStyles = css`
 		position: relative;
-    	top: 16.66vw;
-    	padding-top: 9px;
-    	margin-left: 4px;
-   		font-weight: 500;
+		height: auto;
+		cursor: pointer;
+		transition: 0.4s ease-in;
+		overflow: hidden;
+		display: block;
+	`;
+
+	const titleText = css`
+		position: relative;
+		font-weight: 500;
     	position: relative;
     	display: inline-block;
     	font-size: 2.07vw;
     	line-height: 2vw;
     	text-transform: uppercase;
     	cursor: pointer;
+		& span {
+			transition: .2s ease;
+		}
+	`;
+
+
+	// box1 styling 
+
+	const box1 = css`
+		${boxStyles};
+		top: 16.66vw;
+		width: 41.65vw;
+		box-shadow: ${boxShadow1};
+		& img {
+			${imgStyle};
+		}
+	`;
+
+	const imgTitle1 = css`
+		${titleText};
+    	top: 16.66vw;
+    	padding-top: 9px;
+    	margin-left: 4px;
     	& span {
       		color: ${fontColor};
-			transition: .2s ease;
     	}
 	`;
 
 	// box2 styling
 
 	const box2 = css`
-		position: relative;
+		${boxStyles};
     	left: 41.65vw;
     	width: 58.35vw;
-    	height: auto;
-    	cursor: pointer;
-    	transition: 0.4s ease-in;
     	box-shadow: ${boxShadow2};
-    	overflow: hidden;
-    	display: block;
-    	:hover img {
-        	transform: matrix(1.1, 0, 0, 1.1, 0, 0);
-    	}
     	& img {
-        	position: relative;
-        	display: inline-block;
-        	width: 100%;
-        	height: auto;
-        	z-index: -1;
-        	transition: 0.35s ease-in-out;
-        	transform: matrix(1, 0, 0, 1, 0, 0);
+        	${imgStyle};
     	}
 	`;
 
 	const imgTitle2 = css`
-	    position: relative;
+	    ${titleText};
     	left: 41.65vw;
     	padding-top: 9px;
     	margin-left: 4px;
-    	font-weight: 500;
-    	position: relative;
-    	display: inline-block;
-    	font-size: 2.07vw;
-    	line-height: 2vw;
-    	text-transform: uppercase;
-    	cursor: pointer;
     	& span {
       		color: ${fontColor2};
-			transition: .2s ease;
     	}
 	`; 
 
 	// box3 styling
 
 	const box3 = css`
-		position: relative;
+		${boxStyles};
     	left: 8.33vw;
     	width: 24.99vw;
-    	height: auto;
-    	cursor: pointer;
-    	transition: 0.4s ease-in;
     	box-shadow: ${boxShadow3};
-    	overflow: hidden;
-    	display: block;
-    	:hover img {
-        	transform: matrix(1.1, 0, 0, 1.1, 0, 0);
-    	}
     	& img {
-        	position: relative;
-        	display: inline-block;
-        	width: 100%;
-        	height: auto;
-        	z-index: -1;
-        	transition: 0.35s ease-in-out;
-        	transform: matrix(1, 0, 0, 1, 0, 0);
+        	${imgStyle};
     	}
 	`;
 
 	const imgTitle3 = css`
-		position: relative;
+		${titleText};
     	left: 8.33vw;
     	padding-top: 9px;
     	margin-left: 4px;
-    	font-weight: 500;
-    	position: relative;
-    	display: inline-block;
-    	font-size: 2.07vw;
-    	line-height: 2vw;
-    	text-transform: uppercase;
-    	cursor: pointer;
     	& span {
       		color: ${fontColor3};
-			transition: .2s ease;
     	}
 	`; 
 
 	// box4 styling
 
 	const box4 = css`
-		position: relative;
+		${boxStyles};
     	top: -8.333vw;
     	left: 33.3vw;
     	width: 33.332vw;
-    	height: auto;
-    	cursor: pointer;
-    	transition: 0.4s ease-in;
     	box-shadow: ${boxShadow4};
-    	overflow: hidden;
-    	display: block;
-    	:hover img {
-        	transform: matrix(1.1, 0, 0, 1.1, 0, 0);
-        }
     	& img {
-        	position: relative;
-        	display: inline-block;
-        	width: 100%;
-        	height: auto;
-        	z-index: -1;
-        	transition: 0.35s ease-in-out;
-        	transform: matrix(1, 0, 0, 1, 0, 0);
+        	${imgStyle};
     	}
 	`;
 
 	const imgTitle4 = css`
-		position: relative;
+		${titleText};
     	top: -49.98vw;
     	left: 58.31vw;
     	padding-top: 4px;
     	margin-left: 22px;
-    	font-weight: 500;
-    	display: inline-block;
-    	font-size: 2.07vw;
-    	line-height: 2vw;
-    	text-transform: uppercase;
-    	cursor: pointer;
     	transform: rotate(90deg);
     	& span {
       		color: ${fontColor4};
-			transition: .2s ease;
     	}
 	`;
 
 	// box 5 styling
 
 	const box5 = css`
-		position: relative;
+		${boxStyles};
     	top: -24.99vw;
     	left: 66.6vw;
     	width: 24.99vw;
-    	height: auto;
-    	cursor: pointer;
-    	transition: 0.4s ease-in;
     	box-shadow: ${boxShadow5};
-    	overflow: hidden;
-    	display: block;
-    	:hover img {
-        	transform: matrix(1.1, 0, 0, 1.1, 0, 0);
-        }
     	& img {
-        	position: relative;
-        	display: inline-block;
-        	width: 100%;
-        	height: auto;
-        	z-index: -1;
-        	transition: 0.35s ease-in-out;
-        	transform: matrix(1, 0, 0, 1, 0, 0);
+        	${imgStyle};
     	}
 	`;
 	
 	const imgTitle5 = css`
-		position: relative;
+		${titleText};
     	left: 66.64vw;
     	top: -24.99vw;
     	padding-top: 9px;
     	margin-left: 4px;
-    	font-weight: 500;
-    	position: relative;
-    	display: inline-block;
-    	font-size: 2.07vw;
-    	line-height: 2vw;
-    	text-transform: uppercase;
-    	cursor: pointer;
     	& span {
       		color: ${fontColor5};
-			transition: .2s ease;
     	}
 	`;
 
 	// box6 styling
 
 	const box6 = css`
-		position: relative;
+		${boxStyles};
     	top: -24.99vw;
     	width: 58.31vw;
-    	height: auto;
-    	cursor: pointer;
-    	transition: 0.4s ease-in;
     	box-shadow: ${boxShadow6};
-    	overflow: hidden;
-    	display: block;
-    	:hover img {
-        	transform: matrix(1.1, 0, 0, 1.1, 0, 0);      
-    	}
     	& img {
-        	position: relative;
-        	display: inline-block;
-        	width: 100%;
-        	height: auto;
-        	z-index: -1;
-        	transition: 0.35s ease-in-out;
-        	transform: matrix(1, 0, 0, 1, 0, 0);
+        	${imgStyle};
     	}
 	`;
 
 	const imgTitle6 = css`
-		position: relative;
+		${titleText};
     	top: -24.99vw;
     	padding-top: 9px;
     	margin-left: 4px;
-    	font-weight: 500;
-    	position: relative;
-    	display: inline-block;
-    	font-size: 2.07vw;
-    	line-height: 2vw;
-    	text-transform: uppercase;
-    	cursor: pointer;
     	& span {
       		color: ${fontColor6};
-			transition: .2s ease;
     	}
 	`;
 
 	// box7 styling
 
 	const box7 = css`
-		position: relative;
+		${boxStyles};
     	top: -41.65vw;
     	left: 58.33vw;
     	width: 41.65vw;
-    	height: auto;
-    	cursor: pointer;
-    	transition: 0.2s ease;
     	box-shadow: ${boxShadow7};
-    	overflow: hidden;
-    	display: block;
-    	:hover img {
-        	transform: matrix(1.1, 0, 0, 1.1, 0, 0);
-		}
     	& img {
-        	position: relative;
-        	display: inline-block;
-        	width: 100%;
-        	height: auto;
-        	z-index: -1;
-        	transition: 0.35s ease-in-out;
-        	transform: matrix(1, 0, 0, 1, 0, 0);
+        	${imgStyle};
     	}
 	`;
 
 	const imgTitle7 = css`
-		position: relative;
+		${titleText};
     	top: -41.65vw;
     	left: 58.31vw;
     	padding-top: 9px;
     	margin-left: 4px;
-    	font-weight: 500;
-    	position: relative;
-    	display: inline-block;
-    	font-size: 2.07vw;
-    	line-height: 2vw;
-    	text-transform: uppercase;
-    	cursor: pointer;
     	& span {
       		color: ${fontColor7};
-			transition: .2s ease;
     	}
 	`;
 
 	// box8 styling
 
 	const box8 = css`
-		position: relative;
+		${boxStyles};
     	top: -41.65vw;
     	left: 8.33vw;
     	width: 33.32vw;
-    	height: auto;
-    	cursor: pointer;
-    	transition: 0.4s ease-in;
     	box-shadow: ${boxShadow8};
-    	overflow: hidden;
-    	display: block;
-    	:hover img {
-        	transform: matrix(1.1, 0, 0, 1.1, 0, 0);
-    	}
     	& img {
-        	position: relative;
-        	display: inline-block;
-        	width: 100%;
-        	height: auto;
-        	z-index: -1;
-        	transition: 0.35s ease-in-out;
-        	transform: matrix(1, 0, 0, 1, 0, 0);
+        	${imgStyle};
     	}
 	`;
 
 	const imgTitle8 = css`
-		position: relative;
+		${titleText};
     	left: 8.33vw;
     	top: -41.65vw;
     	padding-top: 9px;
     	margin-left: 4px;
-    	font-weight: 500;
-    	position: relative;
-    	display: inline-block;
-    	font-size: 2.07vw;
-    	line-height: 2vw;
-    	text-transform: uppercase;
-    	cursor: pointer;
     	& span {
       		color: ${fontColor8};
-			transition: .2s ease;
     	}
 	`;
 
 	// box9 styling
 
 	const box9 = css`
-		position: relative;
+		${boxStyles};
     	top: -58.31vw;
     	left: 41.65vw;
     	width: 24.96vw;
-    	height: auto;
-    	cursor: pointer;
-    	transition: 0.4s ease-in;
     	box-shadow: ${boxShadow9};
-    	overflow: hidden;
-    	display: block;
-    	:hover img {
-        	transform: matrix(1.1, 0, 0, 1.1, 0, 0);
-        }
     	& img {
-        	position: relative;
-        	display: inline-block;
-        	width: 100%;
-        	height: auto;
-        	z-index: -1;
-        	transition: 0.35s ease-in-out;
-        	transform: matrix(1, 0, 0, 1, 0, 0);
+        	${imgStyle};
     	}
 	`;
 
 	const imgTitle9 = css`
-		position: relative;
+		${titleText};
     	top: -88.63vw;
     	left: 58.31vw;
     	padding-top: 4px;
     	margin-left: 33px;
-    	font-weight: 500;
-    	position: relative;
-    	display: inline-block;
-    	font-size: 2.07vw;
-    	line-height: 2vw;
-    	text-transform: uppercase;
-    	cursor: pointer;
     	transform: rotate(90deg);
     	& span {
       		color: ${fontColor9};
-			transition: .2s ease;
     	}
 	`;
 
 	// box10 styling
 
 	const box10 = css`
-		position: relative;
+		${boxStyles};
     	top: -66.64vw;
     	left: 66.6vw;
     	width: 24.99vw;
-    	height: auto;
-    	cursor: pointer;
-    	transition: 0.4s ease-in;
     	box-shadow: ${boxShadow10};
-    	overflow: hidden;
-    	display: block;
-    	:hover img {
-        	transform: matrix(1.1, 0, 0, 1.1, 0, 0);
-        }
     	& img {
-        	position: relative;
-        	display: inline-block;
-        	width: 100%;
-        	height: auto;
-        	z-index: -1;
-        	transition: 0.35s ease-in-out;
-        	transform: matrix(1, 0, 0, 1, 0, 0);
+        	${imgStyle};
     	}
 	`;
 
 	const imgTitle10 = css`
-		position: relative;
+		${titleText};
     	top: -66.64vw;
     	left: 66.64vw;
     	padding-top: 9px;
     	margin-left: 4px;
-    	font-weight: 500;
-    	position: relative;
-    	display: inline-block;
-    	font-size: 2.07vw;
-    	line-height: 2vw;
-    	text-transform: uppercase;
-    	cursor: pointer;
     	& span {
       		color: ${fontColor10};
-			transtion: .2s ease;
     	}
 	`;
 
 	// box11 styling
 
 	const box11 = css`
-		position: relative;
+		${boxStyles};
     	left: 49.98vw;
     	top: -58.31vw;
     	width: 49.998vw;
-    	height: auto;
-    	cursor: pointer;
-    	transition: 0.4s ease-in;
     	box-shadow: ${boxShadow11};
-    	overflow: hidden;
-    	display: block;
-    	:hover img {
-        	transform: matrix(1.1, 0, 0, 1.1, 0, 0);  
-    	}
     	& img {
-        	position: relative;
-        	display: inline-block;
-        	width: 100%;
-        	height: auto;
-        	z-index: -1;
-        	transition: 0.35s ease-in-out;
-        	transform: matrix(1, 0, 0, 1, 0, 0);
+        	${imgStyle};
     	}
 	`;
 
 	const imgTitle11 = css`
-		position: relative;
+		${titleText};
     	left: 41.65vw;
     	top: -88.63vw;
     	padding-top: 4px;
     	margin-left: 33px;
-    	font-weight: 500;
-    	position: relative;
-    	display: inline-block;
-    	font-size: 2.07vw;
-    	line-height: 2vw;
-    	text-transform: uppercase;
-    	cursor: pointer;
     	transform: rotate(-90deg);
     	& span {
       		color: ${fontColor11};
-			transition: .2s ease;
     	}
 	`;
 
 	// box12 styling
 
 	const box12 = css`
-		position: relative;
+		${boxStyles};
     	left: 8.33vw;
     	top: -74.97vw;
     	width: 41.65vw;
-    	height: auto;
-    	cursor: pointer;
-    	transition: 0.4s ease-in;
    	 	box-shadow: ${boxShadow12};
-    	overflow: hidden;
-    	display: block;
-    	:hover img {
-        	transform: matrix(1.1, 0, 0, 1.1, 0, 0);  
-    	}
     	& img {
-        	position: relative;
-        	display: inline-block;
-        	width: 100%;
-        	height: auto;
-        	z-index: -1;
-        	transition: 0.35s ease-in-out;
-        	transform: matrix(1, 0, 0, 1, 0, 0);
+        	${imgStyle};
     	}
 	`;
 
 	const imgTitle12 = css`
-		position: relative;
+		${titleText};
     	left: 8.33vw;
     	top: -74.97vw;
     	padding-top: 9px;
     	margin-left: 4px;
-    	font-weight: 500;
-    	position: relative;
-    	display: inline-block;
-    	font-size: 2.07vw;
-    	line-height: 2vw;
-    	text-transform: uppercase;
-    	cursor: pointer;
     	& span {
       		color: ${fontColor12};
-			transition: .2s ease;
     	}
 	`;
-
-
-
 
     return (
         <div className={container}>
