@@ -55,16 +55,29 @@ const Home = () => {
 	const [fontColor10, setFontColor10] = useState("rgba(0,0,0,1)");
 	const [fontColor11, setFontColor11] = useState("rgba(0,0,0,1)");
 	const [fontColor12, setFontColor12] = useState("rgba(0,0,0,1)");
+	const [boxShadow1, setBoxShadow1] = useState("inset 0 0 0 0 rgba(222, 89, 152, 0)");
 
-	const setStyle = (fontColor) => {
+	const setStyle = (fontColor, boxShadow1) => {
 		setFontColor(fontColor);
+		setBoxShadow1(boxShadow1);
 	};
+
+	const setClickStyle = (boxShadow1) => {
+		setBoxShadow1(boxShadow1);
+	};
+
+	// const setClickStyle = (shadowFull1) => {
+	// 	setShadowFull1(shadowFull1);
+	// };
+
 	const setStyle2 = (fontColor2) => {
 		setFontColor2(fontColor2);
 	};
+
 	const setStyle3 = (fontColor3) => {
 		setFontColor3(fontColor3);
 	};
+
 	const setStyle4 = (fontColor4) => {
 		setFontColor4(fontColor4);
 	};
@@ -89,7 +102,7 @@ const Home = () => {
 		setFontColor9(fontColor9);
 	};
 
-	const setStyle10 = (ontColor10) => {
+	const setStyle10 = (fontColor10) => {
 		setFontColor10(fontColor10);
 	};
 
@@ -100,6 +113,34 @@ const Home = () => {
 	const setStyle12 = (fontColor12) => {
 		setFontColor12(fontColor12);
 	}; 
+
+	const box1 = css`
+		position: relative;
+    	top: 16.66vw;
+    	width: 41.65vw;
+    	height: auto;
+    	cursor: pointer;
+    	transition: 0.2s ease;
+    	box-shadow: ${boxShadow1};
+    	overflow: hidden;
+    	display: block;
+    	:hover img {
+        	transform: matrix(1.1, 0, 0, 1.1, 0, 0);
+        	${'' /* opacity: 1; */}
+    	}
+
+    	& img {
+        	position: relative;
+        	display: inline-block;
+        	width: 100%;
+        	height: auto;
+        	z-index: -99;
+        	transition: 0.35s ease-in-out;
+        	transform: matrix(1, 0, 0, 1, 0, 0);
+        	box-shadow: inset 0 0 0 0 rgba(222, 89, 152, 0);
+        	${'' /* opacity: .9; */}
+    	}
+	`;
 
 
 
@@ -345,12 +386,15 @@ const Home = () => {
 
     return (
         <div className={container}>
-			<Box1
-				onMouseEnter={() => setStyle("rgba(222, 89, 152, 1)")}
-				onMouseOut={() => setStyle("rgba(0,0,0,1)")}
+			{/* <Box1 */}
+			<div className={box1}
+				onMouseEnter={() => setStyle("rgba(222, 89, 152, 1)", "inset 0 0 0 20px rgba(222, 89, 152, 1)")}
+				onMouseOut={() => setStyle("rgba(0,0,0,1)", "inset 0 0 0 0 rgba(222, 89, 152, 0)")}
+				onClick={() => setClickStyle("inset 0 0 0 240px rgba(222, 89, 152, 1)")}
 				>
                 <img src= {Travis} alt="la flame"/>
-            </Box1>
+			</div>
+            {/* </Box1> */}
 			<div className={imgTitle1}>
 				{/* <ImgTitle1> */}
 					<span>Travis Scott</span>
