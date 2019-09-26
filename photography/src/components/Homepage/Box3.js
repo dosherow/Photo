@@ -6,12 +6,12 @@ export default styled.div`
     width: 24.99vw;
     height: auto;
     cursor: pointer;
-    transition: 0.65s ease-in-out;
-    box-shadow: inset 0 0 0 0 rgba(222, 89, 152, 0);
+    transition: 0.2s ease;
+    box-shadow: inset 0 0 0 0 rgba(100, 130, 66, 0);
     overflow: hidden;
     display: block;
     :hover {
-        box-shadow: inset 0 0 0 20px rgba(222, 89, 152, 1);
+        box-shadow: inset 0 0 0 20px rgba(100, 130, 66, 1);
     }
     :hover img {
         transform: matrix(1.1, 0, 0, 1.1, 0, 0);
@@ -23,7 +23,7 @@ export default styled.div`
         width: 100%;
         height: auto;
         z-index: -1;
-        transition: 0.4s ease-in-out;
+        transition: 0.35s ease-in-out;
         transform: matrix(1, 0, 0, 1, 0, 0);
     }
 `

@@ -6,7 +6,7 @@ export default styled.div`
     width: 41.65vw;
     height: auto;
     cursor: pointer;
-    transition: 0.65s ease-in-out;
+    transition: 0.2s ease;
     box-shadow: inset 0 0 0 0 rgba(222, 89, 152, 0);
     overflow: hidden;
     display: block;
@@ -14,23 +14,19 @@ export default styled.div`
         box-shadow: inset 0 0 0 20px rgba(222, 89, 152, 1);
     }
     :hover img {
-        transform: matrix(1.1, 0, 0, 1.1, 0, 0);  
+        transform: matrix(1.1, 0, 0, 1.1, 0, 0);
+        ${'' /* opacity: 1; */}
     }
-
-    :hover body {
-        background-color: rgba(#fff, .5);
-        background-image: linear-gradient(rgba(30, 30, 30, .6) 1px, transparent 1px), linear-gradient(90deg, rgba(30, 30, 30, .6) 1px, transparent 1px), linear-gradient(rgba(30, 30, 30, .3) 1px, transparent 1px), linear-gradient(90deg, rgba(30, 30, 30, .3) 1px, transparent 1px);
-        background-size: 33.333vh 50vh, 33.333vw 50vw, 8.333vw 8.333vw, 8.333vw 8.333vw;
-        background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
-  }
 
     & img {
         position: relative;
         display: inline-block;
         width: 100%;
         height: auto;
-        z-index: -1;
-        transition: 0.4s ease-in-out;
+        z-index: -99;
+        transition: 0.35s ease-in-out;
         transform: matrix(1, 0, 0, 1, 0, 0);
+        box-shadow: inset 0 0 0 0 rgba(222, 89, 152, 0);
+        ${'' /* opacity: .9; */}
     }
 `
