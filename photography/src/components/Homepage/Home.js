@@ -42,39 +42,64 @@ import Jcole from './imgs/jcole2.jpg';
 
 const Home = () => {
 
-	const [gridColor, setGridColor] = useState("linear-gradient(rgba(30, 30, 30, .85) 1px, transparent 1px), linear-gradient(90deg, rgba(30, 30, 30, .85) 1px, transparent 1px), linear-gradient(rgba(30, 30, 30, .4) 1px, transparent 1px), linear-gradient(90deg, rgba(30, 30, 30, .4) 1px, transparent 1px)");
+	// const [gridColor, setGridColor] = useState("linear-gradient(rgba(30, 30, 30, .85) 1px, transparent 1px), linear-gradient(90deg, rgba(30, 30, 30, .85) 1px, transparent 1px), linear-gradient(rgba(30, 30, 30, .2) 1px, transparent 1px), linear-gradient(90deg, rgba(30, 30, 30, .2) 1px, transparent 1px)");
 	const [fontColor, setFontColor] = useState("rgba(0,0,0,1)");
 	const [fontColor2, setFontColor2] = useState("rgba(0,0,0,1)");
 	const [fontColor3, setFontColor3] = useState("rgba(0,0,0,1");
 	const [fontColor4, setFontColor4] = useState("rgba(0,0,0,1)");
 	const [fontColor5, setFontColor5] = useState("rgba(0,0,0,1)");
 	const [fontColor6, setFontColor6] = useState("rgba(0,0,0,1");
-	const setStyle = (gridColor, fontColor) => {
-		setGridColor(gridColor);
+	const [fontColor7, setFontColor7] = useState("rgba(0,0,0,1)");
+	const [fontColor8, setFontColor8] = useState("rgba(0,0,0,1)");
+	const [fontColor9, setFontColor9] = useState("rgba(0,0,0,1)");
+	const [fontColor10, setFontColor10] = useState("rgba(0,0,0,1)");
+	const [fontColor11, setFontColor11] = useState("rgba(0,0,0,1)");
+	const [fontColor12, setFontColor12] = useState("rgba(0,0,0,1)");
+
+	const setStyle = (fontColor) => {
 		setFontColor(fontColor);
 	};
-	const setStyle2 = (gridColor, fontColor2) => {
-		setGridColor(gridColor);
+	const setStyle2 = (fontColor2) => {
 		setFontColor2(fontColor2);
 	};
-	const setStyle3 = (gridColor, fontColor3) => {
-		setGridColor(gridColor);
+	const setStyle3 = (fontColor3) => {
 		setFontColor3(fontColor3);
 	};
-	const setStyle4 = (gridColor, fontColor4) => {
-		setGridColor(gridColor);
+	const setStyle4 = (fontColor4) => {
 		setFontColor4(fontColor4);
 	};
 
-	const setStyle5 = (gridColor, fontColor5) => {
-		setGridColor(gridColor);
+	const setStyle5 = (fontColor5) => {
 		setFontColor5(fontColor5);
 	};
 
-	const setStyle6 = (gridColor, fontColor6) => {
-		setGridColor(gridColor);
+	const setStyle6 = (fontColor6) => {
 		setFontColor6(fontColor6);
 	};
+
+	const setStyle7 = (fontColor7) => {
+		setFontColor7(fontColor7);
+	};
+
+	const setStyle8 = (fontColor8) => {
+		setFontColor8(fontColor8);
+	};
+
+	const setStyle9 = (fontColor9) => {
+		setFontColor9(fontColor9);
+	};
+
+	const setStyle10 = (ontColor10) => {
+		setFontColor10(fontColor10);
+	};
+
+	const setStyle11 = (fontColor11) => {
+		setFontColor11(fontColor11);
+	}; 
+
+	const setStyle12 = (fontColor12) => {
+		setFontColor12(fontColor12);
+	}; 
 
 
 
@@ -84,7 +109,7 @@ const Home = () => {
     	padding: 0;
     	height: 100%;
     	background-color: rgba(#fff, .5);
-    	background-image: ${gridColor};
+    	background-image: linear-gradient(rgba(30, 30, 30, .85) 1px, transparent 1px), linear-gradient(90deg, rgba(30, 30, 30, .85) 1px, transparent 1px), linear-gradient(rgba(30, 30, 30, .2) 1px, transparent 1px), linear-gradient(90deg, rgba(30, 30, 30, .2) 1px, transparent 1px);
     	background-size: 33.333vh 50vh, 33.333vw 50vw, 8.333vw 8.333vw, 8.333vw 8.333vw;
     	background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
 	`;
@@ -199,14 +224,130 @@ const Home = () => {
     	}
 	`;
 
+	const imgTitle7 = css`
+		position: relative;
+    	top: -41.65vw;
+    	left: 58.31vw;
+    	padding-top: 9px;
+    	margin-left: 4px;
+    	font-weight: 500;
+    	position: relative;
+    	display: inline-block;
+    	font-size: 2.07vw;
+    	line-height: 2vw;
+    	text-transform: uppercase;
+    	cursor: pointer;
+    	& span {
+      		color: ${fontColor7};
+			transition: .2s ease;
+    	}
+	`;
+
+	const imgTitle8 = css`
+		position: relative;
+    	left: 8.33vw;
+    	top: -41.65vw;
+    	padding-top: 9px;
+    	margin-left: 4px;
+    	font-weight: 500;
+    	position: relative;
+    	display: inline-block;
+    	font-size: 2.07vw;
+    	line-height: 2vw;
+    	text-transform: uppercase;
+    	cursor: pointer;
+    	& span {
+      		color: ${fontColor8};
+			transition: .2s ease;
+    	}
+	`;
+
+	const imgTitle9 = css`
+		position: relative;
+    	top: -88.63vw;
+    	left: 58.31vw;
+    	padding-top: 4px;
+    	margin-left: 33px;
+    	font-weight: 500;
+    	position: relative;
+    	display: inline-block;
+    	font-size: 2.07vw;
+    	line-height: 2vw;
+    	text-transform: uppercase;
+    	cursor: pointer;
+    	transform: rotate(90deg);
+    	& span {
+      		color: ${fontColor9};
+			transition: .2s ease;
+    	}
+	`;
+
+	const imgTitle10 = css`
+		position: relative;
+    	top: -66.64vw;
+    	left: 66.64vw;
+    	padding-top: 9px;
+    	margin-left: 4px;
+    	font-weight: 500;
+    	position: relative;
+    	display: inline-block;
+    	font-size: 2.07vw;
+    	line-height: 2vw;
+    	text-transform: uppercase;
+    	cursor: pointer;
+    	& span {
+      		color: ${fontColor10};
+			transtion: .2s ease;
+    	}
+	`;
+
+	const imgTitle11 = css`
+		position: relative;
+    	left: 41.65vw;
+    	top: -88.63vw;
+    	padding-top: 4px;
+    	margin-left: 33px;
+    	font-weight: 500;
+    	position: relative;
+    	display: inline-block;
+    	font-size: 2.07vw;
+    	line-height: 2vw;
+    	text-transform: uppercase;
+    	cursor: pointer;
+    	transform: rotate(-90deg);
+    	& span {
+      		color: ${fontColor11};
+			transition: .2s ease;
+    	}
+	`;
+
+	const imgTitle12 = css`
+		position: relative;
+    	left: 8.33vw;
+    	top: -74.97vw;
+    	padding-top: 9px;
+    	margin-left: 4px;
+    	font-weight: 500;
+    	position: relative;
+    	display: inline-block;
+    	font-size: 2.07vw;
+    	line-height: 2vw;
+    	text-transform: uppercase;
+    	cursor: pointer;
+    	& span {
+      		color: ${fontColor12};
+			transition: .2s ease;
+    	}
+	`;
+
+
 
 
     return (
         <div className={container}>
-		
-            <Box1
-				onMouseEnter={() => setStyle("linear-gradient(rgba(222, 89, 152, .85) 1px, transparent 1px), linear-gradient(90deg, rgba(222, 89, 152, .85) 1px, transparent 1px), linear-gradient(rgba(222, 89, 152, .4) 1px, transparent 1px), linear-gradient(90deg, rgba(222, 89, 152, .4) 1px, transparent 1px)", "rgba(222, 89, 152, 1)")}
-				onMouseOut={() => setStyle("linear-gradient(rgba(30, 30, 30, .85) 1px, transparent 1px), linear-gradient(90deg, rgba(30, 30, 30, .85) 1px, transparent 1px), linear-gradient(rgba(30, 30, 30, .4) 1px, transparent 1px), linear-gradient(90deg, rgba(30, 30, 30, .4) 1px, transparent 1px)", "rgba(0,0,0,1)")}
+			<Box1
+				onMouseEnter={() => setStyle("rgba(222, 89, 152, 1)")}
+				onMouseOut={() => setStyle("rgba(0,0,0,1)")}
 				>
                 <img src= {Travis} alt="la flame"/>
             </Box1>
@@ -216,8 +357,8 @@ const Home = () => {
 				{/* </ImgTitle1> */}
 			</div>
 			<Box2
-				onMouseEnter={() => setStyle2("linear-gradient(rgba(84, 86, 101, .85) 1px, transparent 1px), linear-gradient(90deg, rgba(84, 86, 101, .85) 1px, transparent 1px), linear-gradient(rgba(84, 86, 101, .4) 1px, transparent 1px), linear-gradient(90deg, rgba(84, 86, 101, .4) 1px, transparent 1px)", "rgba(84, 86, 101, 1)")}
-				onMouseOut={() => setStyle2("linear-gradient(rgba(30, 30, 30, .85) 1px, transparent 1px), linear-gradient(90deg, rgba(30, 30, 30, .85) 1px, transparent 1px), linear-gradient(rgba(30, 30, 30, .4) 1px, transparent 1px), linear-gradient(90deg, rgba(30, 30, 30, .4) 1px, transparent 1px)", "rgba(0,0,0,1)")}
+				onMouseEnter={() => setStyle2("rgba(84, 86, 101, 1)")}
+				onMouseOut={() => setStyle2("rgba(0,0,0,1)")}
 			>
                 <img src= {Bryson} alt="bryson tiller"/>
             </Box2>
@@ -227,8 +368,8 @@ const Home = () => {
 				{/* </ImgTitle2> */}
 			</div>
 			<Box3
-				onMouseEnter={() => setStyle3("linear-gradient(rgba(100, 130, 66, .85) 1px, transparent 1px), linear-gradient(90deg, rgba(100, 130, 66, .85) 1px, transparent 1px), linear-gradient(rgba(100, 130, 66, .4) 1px, transparent 1px), linear-gradient(90deg, rgba(100, 130, 66, .4) 1px, transparent 1px)", "rgba(100, 130, 66, 1)")}
-				onMouseOut={() => setStyle3("linear-gradient(rgba(30, 30, 30, .85) 1px, transparent 1px), linear-gradient(90deg, rgba(30, 30, 30, .85) 1px, transparent 1px), linear-gradient(rgba(30, 30, 30, .4) 1px, transparent 1px), linear-gradient(90deg, rgba(30, 30, 30, .4) 1px, transparent 1px)", "rgba(0,0,0,1)")}
+				onMouseEnter={() => setStyle3("rgba(100, 130, 66, 1)")}
+				onMouseOut={() => setStyle3("rgba(0,0,0,1)")}
 			>
                 <img src= {Mura} alt="mura masa"/>
             </Box3>
@@ -238,8 +379,8 @@ const Home = () => {
 			</div>
 			{/* </ImgTitle3> */}
 			<Box4
-				onMouseEnter={() => setStyle4("linear-gradient(rgba(84, 86, 101, .85) 1px, transparent 1px), linear-gradient(90deg, rgba(84, 86, 101, .85) 1px, transparent 1px), linear-gradient(rgba(84, 86, 101, .4) 1px, transparent 1px), linear-gradient(90deg, rgba(84, 86, 101, .4) 1px, transparent 1px)", "rgba(84, 86, 101, 1)")}
-				onMouseOut={() => setStyle4("linear-gradient(rgba(30, 30, 30, .85) 1px, transparent 1px), linear-gradient(90deg, rgba(30, 30, 30, .85) 1px, transparent 1px), linear-gradient(rgba(30, 30, 30, .4) 1px, transparent 1px), linear-gradient(90deg, rgba(30, 30, 30, .4) 1px, transparent 1px)", "rgba(0,0,0,1)")}
+				onMouseEnter={() => setStyle4("rgba(84, 86, 101, 1)")}
+				onMouseOut={() => setStyle4("rgba(0,0,0,1)")}
 			>
                 <img src= {Anderson} alt="anderson paak"/>
             </Box4>
@@ -249,8 +390,8 @@ const Home = () => {
 			</div>
 			{/* </ImgTitle4> */}
 			<Box5
-				onMouseEnter={() => setStyle5("linear-gradient(rgba(254, 193, 100, .85) 1px, transparent 1px), linear-gradient(90deg, rgba(254, 193, 100, .85) 1px, transparent 1px), linear-gradient(rgba(254, 193, 100, .4) 1px, transparent 1px), linear-gradient(90deg, rgba(254, 193, 100, .4) 1px, transparent 1px)", "rgba(254, 193, 100, 1)")}
-				onMouseOut={() => setStyle5("linear-gradient(rgba(30, 30, 30, .85) 1px, transparent 1px), linear-gradient(90deg, rgba(30, 30, 30, .85) 1px, transparent 1px), linear-gradient(rgba(30, 30, 30, .4) 1px, transparent 1px), linear-gradient(90deg, rgba(30, 30, 30, .4) 1px, transparent 1px)", "rgba(0,0,0,1)")}
+				onMouseEnter={() => setStyle5("rgba(254, 193, 100, 1)")}
+				onMouseOut={() => setStyle5("rgba(0,0,0,1)")}
 			>
                 <img src= {Majid} alt="majid jordan"/>
             </Box5>
@@ -260,8 +401,8 @@ const Home = () => {
 			</div>
 			{/* </ImgTitle5> */}
 			<Box6
-				onMouseEnter={() => setStyle6("linear-gradient(rgba(239, 240, 198, .85) 1px, transparent 1px), linear-gradient(90deg, rgba(239, 240, 198, .85) 1px, transparent 1px), linear-gradient(rgba(239, 240, 198, .4) 1px, transparent 1px), linear-gradient(90deg, rgba(239, 240, 198, .4) 1px, transparent 1px)", "rgba(239, 240, 198, 1)")}
-				onMouseOut={() => setStyle6("linear-gradient(rgba(30, 30, 30, .85) 1px, transparent 1px), linear-gradient(90deg, rgba(30, 30, 30, .85) 1px, transparent 1px), linear-gradient(rgba(30, 30, 30, .4) 1px, transparent 1px), linear-gradient(90deg, rgba(30, 30, 30, .4) 1px, transparent 1px)", "rgba(0,0,0,1)")}
+				onMouseEnter={() => setStyle6("rgba(239, 240, 198, 1)")}
+				onMouseOut={() => setStyle6("rgba(0,0,0,1)")}
 			>
                 <img src= {Black} alt="6lack"/>
             </Box6>
@@ -270,42 +411,72 @@ const Home = () => {
 					<span>6lack</span>
 			</div>
 			{/* </ImgTitle6> */}
-			<Box7>
+			<Box7
+				onMouseEnter={() => setStyle7("rgba(92, 145, 223, 1)")}
+				onMouseOut={() => setStyle7("rgba(0,0,0,1)")}
+			>
                 <img src= {KK} alt="king krule"/>
             </Box7>
-			<ImgTitle7>
+			{/* <ImgTitle7> */}
+			<div className={imgTitle7}>
 					<span>King Krule</span>
-			</ImgTitle7>
-			<Box8>
+			</div>
+			{/* </ImgTitle7> */}
+			<Box8
+				onMouseEnter={() => setStyle8("rgba(84, 86, 101, 1)")}
+				onMouseOut={() => setStyle8("rgba(0,0,0,1)")}
+			>
                 <img src= {Earl} alt="Earl Sweatshirt"/>
             </Box8>
-			<ImgTitle8>
+			{/* <ImgTitle8> */}
+			<div className={imgTitle8}>
 					<span>Earl Sweatshirt</span>
-			</ImgTitle8>
-			<Box9>
+			</div>
+			{/* </ImgTitle8> */}
+			<Box9
+				onMouseEnter={() => setStyle9("rgba(59, 61, 47, 1)")}
+				onMouseOut={() => setStyle9("rgba(0,0,0,1)")}
+			>
                 <img src= {Vince} alt="Vince Staples"/>
             </Box9>
-			<ImgTitle9>
+			{/* <ImgTitle9> */}
+			<div className={imgTitle9}>
 					<span>Vince Staples</span>
-			</ImgTitle9>
-			<Box10>
+			</div>
+			{/* </ImgTitle9> */}
+			<Box10
+				onMouseEnter={() => setStyle10("rgba(81, 104, 112, 1)")}
+				onMouseOut={() => setStyle10("rgba(0,0,0,1)")}
+			>
                 <img src= {Mac} alt="Mac Demarco"/>
             </Box10>
-			<ImgTitle10>
+			{/* <ImgTitle10> */}
+			<div className={imgTitle10}>
 					<span>Mac Demarco</span>
-			</ImgTitle10>
-			<Box11>
+			</div>
+			{/* </ImgTitle10> */}
+			<Box11
+				onMouseEnter={() => setStyle11("rgba(255, 56, 240, 1)")}
+				onMouseOut={() => setStyle11("rgba(0,0,0,1)")}
+			>
                 <img src= {Jcole} alt="J Cole"/>
             </Box11>
-			<ImgTitle11>
+			{/* <ImgTitle11> */}
+			<div className={imgTitle11}>
 					<span>J. Cole</span>
-			</ImgTitle11>
-			<Box12>
+			</div>
+			{/* </ImgTitle11> */}
+			<Box12
+				onMouseEnter={() => setStyle12("rgba(106, 116, 115, 1)")}
+				onMouseOut={() => setStyle12("rgba(0,0,0,1)")}
+			>
                 <img src= {Moses} alt="Moses Sumney"/>
             </Box12>
-			<ImgTitle12>
+			{/* <ImgTitle12> */}
+			<div className={imgTitle12}>
 					<span>Moses Sumney</span>
-			</ImgTitle12>
+			</div>
+			{/* </ImgTitle12> */}
 
 		</div>
     	)
