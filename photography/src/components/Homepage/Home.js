@@ -42,7 +42,7 @@ import Jcole from './imgs/jcole2.jpg';
 
 const Home = () => {
 
-	// state management for mouse events. we are setting initial state to default font colors and box/image div styling.
+	// state management for mouse events. we are setting initial state to default font colors and box/image div styling and page bg color.
 
 	// const [gridColor, setGridColor] = useState("linear-gradient(rgba(30, 30, 30, .85) 1px, transparent 1px), linear-gradient(90deg, rgba(30, 30, 30, .85) 1px, transparent 1px), linear-gradient(rgba(30, 30, 30, .2) 1px, transparent 1px), linear-gradient(90deg, rgba(30, 30, 30, .2) 1px, transparent 1px)");
 	const [fontColor, setFontColor] = useState("rgba(0,0,0,1)");
@@ -69,6 +69,7 @@ const Home = () => {
 	const [boxShadow10, setBoxShadow10] = useState("inset 0 0 0 0 rgba(81, 104, 112, 0)");
 	const [boxShadow11, setBoxShadow11] = useState("inset 0 0 0 0 rgba(255, 56, 240, 0)");
 	const [boxShadow12, setBoxShadow12] = useState("inset 0 0 0 0 rgba(106, 116, 115, 0)");
+	const [background1, setBackground1] = useState("rgba(255, 255, 255, 0)");
 
 	// we create set functions to call upon mouse events in the return()
 
@@ -79,12 +80,7 @@ const Home = () => {
 		setBoxShadow1(boxShadow1);
 	};
 
-	const setClickStyle = (boxShadow1) => {
-		setBoxShadow12(boxShadow1);
-		setBoxShadow11(boxShadow1);
-		setBoxShadow10(boxShadow1);
-		setBoxShadow9(boxShadow1);
-		setBoxShadow8(boxShadow1);
+	const setClickStyle = (boxShadow1, background1) => {
 		setBoxShadow1(boxShadow1);
 		setBoxShadow2(boxShadow1);
 		setBoxShadow3(boxShadow1);
@@ -92,6 +88,13 @@ const Home = () => {
 		setBoxShadow5(boxShadow1);
 		setBoxShadow6(boxShadow1);
 		setBoxShadow7(boxShadow1);
+		setBoxShadow8(boxShadow1);
+		setBoxShadow9(boxShadow1);
+		setBoxShadow10(boxShadow1);
+		setBoxShadow11(boxShadow1);
+		setBoxShadow12(boxShadow1);
+		setBackground1(background1);
+
 	};
 
 	// box 2 mouse events
@@ -101,7 +104,7 @@ const Home = () => {
 		setBoxShadow2(boxShadow2);
 	};
 
-	const setClickStyle2 = (boxShadow2) => {
+	const setClickStyle2 = (boxShadow2, background1) => {
 		setBoxShadow12(boxShadow2);
 		setBoxShadow11(boxShadow2);
 		setBoxShadow10(boxShadow2);
@@ -114,6 +117,7 @@ const Home = () => {
 		setBoxShadow3(boxShadow2);
 		setBoxShadow2(boxShadow2);
 		setBoxShadow1(boxShadow2);
+		setBackground1(background1);
 	};
 
 	// box3 mouse events
@@ -123,7 +127,7 @@ const Home = () => {
 		setBoxShadow3(boxShadow3);
 	};
 
-	const setClickStyle3 = (boxShadow3) => {
+	const setClickStyle3 = (boxShadow3, background1) => {
 		setBoxShadow12(boxShadow3);
 		setBoxShadow11(boxShadow3);
 		setBoxShadow10(boxShadow3);
@@ -136,6 +140,7 @@ const Home = () => {
 		setBoxShadow3(boxShadow3);
 		setBoxShadow2(boxShadow3);
 		setBoxShadow1(boxShadow3);
+		setBackground1(background1);
 	};
 
 	// box4 mouse events
@@ -145,7 +150,7 @@ const Home = () => {
 		setBoxShadow4(boxShadow4);
 	};
 
-	const setClickStyle4 = (boxShadow4) => {
+	const setClickStyle4 = (boxShadow4, background1) => {
 		setBoxShadow12(boxShadow4);
 		setBoxShadow11(boxShadow4);
 		setBoxShadow10(boxShadow4);
@@ -158,6 +163,7 @@ const Home = () => {
 		setBoxShadow3(boxShadow4);
 		setBoxShadow2(boxShadow4);
 		setBoxShadow1(boxShadow4);
+		setBackground1(background1);
 	};
 
 	// box5 mouse events
@@ -167,7 +173,7 @@ const Home = () => {
 		setBoxShadow5(boxShadow5);
 	};
 
-	const setClickStyle5 = (boxShadow5) => {
+	const setClickStyle5 = (boxShadow5, background1) => {
 		setBoxShadow12(boxShadow5);
 		setBoxShadow11(boxShadow5);
 		setBoxShadow10(boxShadow5);
@@ -180,6 +186,7 @@ const Home = () => {
 		setBoxShadow3(boxShadow5);
 		setBoxShadow2(boxShadow5);
 		setBoxShadow1(boxShadow5);
+		setBackground1(background1);
 	};
 
 	// box6 mouse events
@@ -189,7 +196,7 @@ const Home = () => {
 		setBoxShadow6(boxShadow6);
 	};
 
-	const setClickStyle6 = (boxShadow6) => {
+	const setClickStyle6 = (boxShadow6, background1) => {
 		setBoxShadow12(boxShadow6);
 		setBoxShadow11(boxShadow6);
 		setBoxShadow10(boxShadow6);
@@ -202,6 +209,7 @@ const Home = () => {
 		setBoxShadow3(boxShadow6);
 		setBoxShadow2(boxShadow6);
 		setBoxShadow1(boxShadow6);
+		setBackground1(background1);
 	};
 
 	// box7 mouse events
@@ -211,7 +219,7 @@ const Home = () => {
 		setBoxShadow7(boxShadow7);
 	};
 
-	const setClickStyle7 = (boxShadow7) => {
+	const setClickStyle7 = (boxShadow7, background1) => {
 		setBoxShadow12(boxShadow7);
 		setBoxShadow11(boxShadow7);
 		setBoxShadow10(boxShadow7);
@@ -224,6 +232,7 @@ const Home = () => {
 		setBoxShadow3(boxShadow7);
 		setBoxShadow2(boxShadow7);
 		setBoxShadow1(boxShadow7);
+		setBackground1(background1);
 	};
 
 	// box8 mouse events
@@ -233,7 +242,7 @@ const Home = () => {
 		setBoxShadow8(boxShadow8);
 	};
 
-	const setClickStyle8 = (boxShadow8) => {
+	const setClickStyle8 = (boxShadow8, background1) => {
 		setBoxShadow12(boxShadow8);
 		setBoxShadow11(boxShadow8);
 		setBoxShadow10(boxShadow8);
@@ -246,6 +255,7 @@ const Home = () => {
 		setBoxShadow3(boxShadow8);
 		setBoxShadow2(boxShadow8);
 		setBoxShadow1(boxShadow8);
+		setBackground1(background1);
 	};
 
 	// box9 mouse events
@@ -255,7 +265,7 @@ const Home = () => {
 		setBoxShadow9(boxShadow9);
 	};
 
-	const setClickStyle9 = (boxShadow9) => {
+	const setClickStyle9 = (boxShadow9, background1) => {
 		setBoxShadow12(boxShadow9);
 		setBoxShadow11(boxShadow9);
 		setBoxShadow10(boxShadow9);
@@ -268,6 +278,7 @@ const Home = () => {
 		setBoxShadow3(boxShadow9);
 		setBoxShadow2(boxShadow9);
 		setBoxShadow1(boxShadow9);
+		setBackground1(background1);
 	};
 
 	// box10 mouse events
@@ -277,7 +288,7 @@ const Home = () => {
 		setBoxShadow10(boxShadow10);
 	};
 
-	const setClickStyle10 = (boxShadow10) => {
+	const setClickStyle10 = (boxShadow10, background1) => {
 		setBoxShadow12(boxShadow10);
 		setBoxShadow11(boxShadow10);
 		setBoxShadow10(boxShadow10);
@@ -290,6 +301,7 @@ const Home = () => {
 		setBoxShadow3(boxShadow10);
 		setBoxShadow2(boxShadow10);
 		setBoxShadow1(boxShadow10);
+		setBackground1(background1);
 	};
 
 	// box11 mouse events
@@ -299,7 +311,7 @@ const Home = () => {
 		setBoxShadow11(boxShadow11);
 	}; 
 
-	const setClickStyle11 = (boxShadow11) => {
+	const setClickStyle11 = (boxShadow11, background1) => {
 		setBoxShadow12(boxShadow11);
 		setBoxShadow11(boxShadow11);
 		setBoxShadow10(boxShadow11);
@@ -312,6 +324,7 @@ const Home = () => {
 		setBoxShadow3(boxShadow11);
 		setBoxShadow2(boxShadow11);
 		setBoxShadow1(boxShadow11);
+		setBackground1(background1);
 	};
 
 	// box12 mouse events
@@ -321,7 +334,7 @@ const Home = () => {
 		setBoxShadow12(boxShadow12);
 	}; 
 
-	const setClickStyle12 = (boxShadow12) => {
+	const setClickStyle12 = (boxShadow12, background1) => {
 		setBoxShadow12(boxShadow12);
 		setBoxShadow11(boxShadow12);
 		setBoxShadow10(boxShadow12);
@@ -334,6 +347,7 @@ const Home = () => {
 		setBoxShadow3(boxShadow12);
 		setBoxShadow2(boxShadow12);
 		setBoxShadow1(boxShadow12);
+		setBackground1(background1);
 	};
 
 	// outer container styling 
@@ -343,7 +357,8 @@ const Home = () => {
     	margin: 0;
     	padding: 0;
     	height: 100%;
-    	background-color: rgba(#fff, .5);
+    	background-color: ${background1};
+		transition: background-color .6s ease-in;
     	background-image: linear-gradient(rgba(30, 30, 30, .85) 1px, transparent 1px), linear-gradient(90deg, rgba(30, 30, 30, .85) 1px, transparent 1px), linear-gradient(rgba(30, 30, 30, .2) 1px, transparent 1px), linear-gradient(90deg, rgba(30, 30, 30, .2) 1px, transparent 1px);
     	background-size: 33.333vh 50vh, 33.333vw 50vw, 8.333vw 8.333vw, 8.333vw 8.333vw;
     	background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
@@ -677,7 +692,7 @@ const Home = () => {
 			<div className={box1}
 				onMouseEnter={() => setStyle("rgba(222, 89, 152, 1)", "inset 0 0 0 20px rgba(222, 89, 152, 1)")}
 				onMouseOut={() => setStyle("rgba(0,0,0,1)", "inset 0 0 0 0 rgba(222, 89, 152, 0)")}
-				onClick={() => setClickStyle("inset 0 0 0 100vw rgba(222, 89, 152, 1)")}
+				onClick={() => setClickStyle("inset 0 0 0 100vw rgba(222, 89, 152, 1)", "rgba(222, 89, 152, 1)")}
 				>
                 <img src= {Travis} alt="la flame"/>
 			</div>
@@ -691,7 +706,7 @@ const Home = () => {
 			<div className={box2}
 				onMouseEnter={() => setStyle2("rgba(84, 86, 101, 1)", "inset 0 0 0 20px rgba(84, 86, 101, 1)")}
 				onMouseOut={() => setStyle2("rgba(0,0,0,1)", "inset 0 0 0 0 rgba(84, 86, 101, 0)")}
-				onClick={() => setClickStyle2("inset 0 0 0 100vw rgba(84, 86, 101, 1)")}
+				onClick={() => setClickStyle2("inset 0 0 0 100vw rgba(84, 86, 101, 1)", "rgba(84, 86, 101, 1)")}
 			>
                 <img src= {Bryson} alt="bryson tiller"/>
 			</div>
@@ -705,7 +720,7 @@ const Home = () => {
 			<div className={box3}
 				onMouseEnter={() => setStyle3("rgba(100, 130, 66, 1)", "inset 0 0 0 20px rgba(100, 130, 66, 1)")}
 				onMouseOut={() => setStyle3("rgba(0,0,0,1)", "inset 0 0 0 0 rgba(100, 130, 66, 0)")}
-				onClick={() => setClickStyle3("inset 0 0 0 100vw rgba(100, 130, 66, 1)")}
+				onClick={() => setClickStyle3("inset 0 0 0 100vw rgba(100, 130, 66, 1)", "rgba(100, 130, 66, 1)")}
 			>
                 <img src= {Mura} alt="mura masa"/>
 			</div>
@@ -719,7 +734,7 @@ const Home = () => {
 			<div className={box4}
 				onMouseEnter={() => setStyle4("rgba(84, 86, 101, 1)", "inset 0 0 0 20px rgba(84, 86, 101, 1)")}
 				onMouseOut={() => setStyle4("rgba(0,0,0,1)", "inset 0 0 0 0 rgba(84, 86, 101, 0)")}
-				onClick={() => setClickStyle4("inset 0 0 0 100vw rgba(84, 86, 101, 1)")}
+				onClick={() => setClickStyle4("inset 0 0 0 100vw rgba(84, 86, 101, 1)", "rgba(84, 86, 101, 1)")}
 			>
                 <img src= {Anderson} alt="anderson paak"/>
 			</div>
@@ -733,7 +748,7 @@ const Home = () => {
 			<div className={box5}
 				onMouseEnter={() => setStyle5("rgba(254, 193, 100, 1)", "inset 0 0 0 20px rgba(254, 193, 100, 1)")}
 				onMouseOut={() => setStyle5("rgba(0,0,0,1)", "inset 0 0 0 0 rgba(254, 193, 100, 0)")}
-				onClick={() => setClickStyle5("inset 0 0 0 100vw rgba(254, 193, 100, 1)")}
+				onClick={() => setClickStyle5("inset 0 0 0 100vw rgba(254, 193, 100, 1)", "rgba(254, 193, 100, 1)")}
 			>
                 <img src= {Majid} alt="majid jordan"/>
 			</div>
@@ -747,7 +762,7 @@ const Home = () => {
 			<div className={box6}
 				onMouseEnter={() => setStyle6("rgba(239, 240, 198, 1)", "inset 0 0 0 20px rgba(239, 240, 198, 1)")}
 				onMouseOut={() => setStyle6("rgba(0,0,0,1)", "inset 0 0 0 0 rgba(239, 240, 198, 0)")}
-				onClick={() => setClickStyle6("inset 0 0 0 100vw rgba(239, 240, 198, 1)")}
+				onClick={() => setClickStyle6("inset 0 0 0 100vw rgba(239, 240, 198, 1)", "rgba(239, 240, 198, 1)")}
 			>
                 <img src= {Black} alt="6lack"/>
 			</div>
@@ -761,7 +776,7 @@ const Home = () => {
 			<div className={box7}
 				onMouseEnter={() => setStyle7("rgba(92, 145, 223, 1)", "inset 0 0 0 20px rgba(92, 145, 223, 1)")}
 				onMouseOut={() => setStyle7("rgba(0,0,0,1)", "inset 0 0 0 0 rgba(92, 145, 223, 0)")}
-				onClick={() => setClickStyle7("inset 0 0 0 100vw rgba(92, 145, 223, 1)")}
+				onClick={() => setClickStyle7("inset 0 0 0 100vw rgba(92, 145, 223, 1)", "rgba(92, 145, 223, 1)")}
 			>
                 <img src= {KK} alt="king krule"/>
 			</div>
@@ -775,7 +790,7 @@ const Home = () => {
 			<div className={box8}
 				onMouseEnter={() => setStyle8("rgba(84, 86, 101, 1)", "inset 0 0 0 20px rgba(84, 86, 101, 1)")}
 				onMouseOut={() => setStyle8("rgba(0,0,0,1)", "inset 0 0 0 0 rgba(84, 86, 101, 0)")}
-				onClick={() => setClickStyle8("inset 0 0 0 100vw rgba(84, 86, 101, 1)")}
+				onClick={() => setClickStyle8("inset 0 0 0 100vw rgba(84, 86, 101, 1)", "rgba(84, 85, 101, 1)")}
 			>
                 <img src= {Earl} alt="Earl Sweatshirt"/>
 			</div>
@@ -789,7 +804,7 @@ const Home = () => {
 			<div className={box9}
 				onMouseEnter={() => setStyle9("rgba(59, 61, 47, 1)", "inset 0 0 0 20px rgba(59, 61, 47, 1)")}
 				onMouseOut={() => setStyle9("rgba(0,0,0,1)", "inset 0 0 0 0 rgba(59, 61, 47, 0)")}
-				onClick={() => setClickStyle9("inset 0 0 0 100vw rgba(59, 61, 47, 1)")}
+				onClick={() => setClickStyle9("inset 0 0 0 100vw rgba(59, 61, 47, 1)", "rgba(59, 61, 47, 1)")}
 			>
                 <img src= {Vince} alt="Vince Staples"/>
 			</div>
@@ -803,7 +818,7 @@ const Home = () => {
 			<div className={box10}
 				onMouseEnter={() => setStyle10("rgba(81, 104, 112, 1)", "inset 0 0 0 20px rgba(81, 104, 112, 1)")}
 				onMouseOut={() => setStyle10("rgba(0,0,0,1)", "inset 0 0 0 0 rgba(81, 104, 112, 0)")}
-				onClick={() => setClickStyle10("inset 0 0 0 100vw rgba(81, 104, 112, 1)")}
+				onClick={() => setClickStyle10("inset 0 0 0 100vw rgba(81, 104, 112, 1)", "rgba(81, 104, 112, 1)")}
 			>
                 <img src= {Mac} alt="Mac Demarco"/>
 			</div>
@@ -817,7 +832,7 @@ const Home = () => {
 			<div className={box11}
 				onMouseEnter={() => setStyle11("rgba(255, 56, 240, 1)", "inset 0 0 0 20px rgba(255, 56, 240, 1)")}
 				onMouseOut={() => setStyle11("rgba(0,0,0,1)", "inset 0 0 0 0 rgba(255, 56, 240, 0)")}
-				onClick={() => setClickStyle11("inset 0 0 0 100vw rgba(255, 56, 240, 1)")}
+				onClick={() => setClickStyle11("inset 0 0 0 100vw rgba(255, 56, 240, 1)", "rgba(255, 56, 240, 1)")}
 			>
                 <img src= {Jcole} alt="J Cole"/>
 			</div>
@@ -831,7 +846,7 @@ const Home = () => {
 			<div className={box12}
 				onMouseEnter={() => setStyle12("rgba(106, 116, 115, 1)", "inset 0 0 0 20px rgba(106, 116, 115, 1)")}
 				onMouseOut={() => setStyle12("rgba(0,0,0,1)", "inset 0 0 0 0 rgba(106, 116, 115, 0)")}
-				onClick={() => setClickStyle12("inset 0 0 0 100vw rgba(106, 116, 115, 1)")}
+				onClick={() => setClickStyle12("inset 0 0 0 100vw rgba(106, 116, 115, 1)", "rgba(106, 116, 115, 1)")}
 
 			>
                 <img src= {Moses} alt="Moses Sumney"/>
