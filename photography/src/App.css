@@ -1,5 +1,7 @@
 html, body {
-  height: 100vh;
+  position: absolute;
+  overflow-x: hidden;
+  width: 100vw;
 }
 
 

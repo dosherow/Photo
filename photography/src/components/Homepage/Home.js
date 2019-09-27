@@ -360,9 +360,9 @@ const Home = () => {
     	height: 100%;
     	background-color: ${background1};
 		transition: background-color .6s ease-in;
-    	background-image: linear-gradient(rgba(30, 30, 30, .85) 1px, transparent 1px), linear-gradient(90deg, rgba(30, 30, 30, .85) 1px, transparent 1px), linear-gradient(rgba(30, 30, 30, .2) 1px, transparent 1px), linear-gradient(90deg, rgba(30, 30, 30, .2) 1px, transparent 1px);
+    	${'' /* background-image: linear-gradient(rgba(30, 30, 30, .85) 1px, transparent 1px), linear-gradient(90deg, rgba(30, 30, 30, .85) 1px, transparent 1px), linear-gradient(rgba(30, 30, 30, .2) 1px, transparent 1px), linear-gradient(90deg, rgba(30, 30, 30, .2) 1px, transparent 1px);
     	background-size: 33.333vh 50vh, 33.333vw 50vw, 8.333vw 8.333vw, 8.333vw 8.333vw;
-    	background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
+    	background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px; */}
 	`;
 
 
@@ -373,10 +373,10 @@ const Home = () => {
 		display: inline-block;
 		width: 100%;
 		height: auto;
-		z-index: -1;
+		z-index: -10;
 		transition: 0.35s ease-in-out;
 		transform: matrix(1, 0, 0, 1, 0, 0);
-		:hover img {
+		:hover {
 			transform: matrix(1.1, 0, 0, 1.1, 0, 0);
 		}
 	`;
@@ -413,6 +413,9 @@ const Home = () => {
 		top: 16.66vw;
 		width: 41.65vw;
 		box-shadow: ${boxShadow1};
+		:hover img {
+			z-index: 100 !important;
+		}
 		& img {
 			${imgStyle};
 		}
@@ -727,17 +730,127 @@ const Home = () => {
 		}
 	`;
 
+	// grid small opacity styling
+
+	const grid1Styles = css`
+		background-color: rgba(255,0,0,.1);
+		width: 1px;
+		position: absolute;
+		height: 100%;
+		top: 0;
+	`;
+
+	const gridLines1 = css`
+		opacity: 1;
+		position: absolute;
+		height: 100%;
+		top: 0;
+		z-index: -9;
+		width: 100%;
+		left: 0;
+		background: repeating-linear-gradient(180deg, transparent, transparent calc(8.3333vw - 1px), rgba(255,0,0,.1) calc(8.33333vw - 1px),rgba(255,0,0,.1) 8.33333vw);
+		background-image: repeating-linear-gradient(transparent, transparent calc(8.33333vw - 1px), rgba(255, 0, 0, 0.1) calc(8.33333vw - 1px), rgba(255, 0, 0, 0.1) 8.33333vw);
+	`;
+
+
+	const grid1 = css`
+		left: 8.33333vw;
+		${grid1Styles};
+	`;
+
+	const grid2 = css`
+		left: 16.66667vw;
+		${grid1Styles};
+	`;
+
+	const grid3 = css`
+		left: 25vw;
+		${grid1Styles};
+	`;
+
+	const grid4 = css`
+		left: 41.66667vw;
+		${grid1Styles};
+	`;
+
+	const grid5 = css`
+		left: 50vw;
+		${grid1Styles};
+	`;
+
+	const grid6 = css`
+		left: 58.33333vw;
+		${grid1Styles};
+	`;
+
+	const grid7 = css`
+		left: 75vw;
+		${grid1Styles};
+	`;
+
+	const grid8 = css`
+		left: 83.33333vw;
+		${grid1Styles};
+	`;
+
+	const grid9 = css`
+		left: 91.66667vw;
+		${grid1Styles};
+	`;
+
+	// grid large opacity styling
+
+	const gridLines2 = css`
+		position: fixed;
+		width: 100%;
+		top: 0;
+		left: 0;
+	`;
+
+	const grid10 = css`
+		position: absolute;
+		transform-origin: left;
+		height: 1px;
+		top: calc(var(--vh,1vh)*33.3333);
+		width: 100%;
+		background-color: red;
+	`;
+
+	const grid11 = css`
+		position: absolute;
+		transform-origin: left;
+		height: 1px;
+		top: calc(var(--vh,1vh)*66.6666);
+		width: 100vw;
+		background-color: red;
+	`;
+
+	const grid12 = css`
+		position: absolute;
+		transform-origin: top;
+		height: calc(var(--vh,1vh)*100);
+		width: 1px;
+		left: 33.33333vw;
+		background-color: red;
+	`;
+
+	const grid13 = css`
+		left: 66.66667vw;
+		position: absolute;
+		transform-origin: top;
+		height: calc(var(--vh,1vh)*100);
+		width: 1px;
+		background-color: red;
+	`;
+
+	// attempting to fix images with z-index
+
+
+
     return (
         <div className={container}>
-			<div className={nav}>
-				<ul className={navLinks}>
-					<li><a href="#">Home</a></li>
-					<li><a href="#">Work</a></li>
-					<li><a href="#">About</a></li>
-					<li><a href="#">Contact</a></li>
-				</ul>
-			</div>
 			{/* <Box1 */}
+
 			<div className={box1}
 				onMouseEnter={() => setStyle("rgba(222, 89, 152, 1)", "inset 0 0 0 20px rgba(222, 89, 152, 1)")}
 				onMouseOut={() => setStyle("rgba(0,0,0,1)", "inset 0 0 0 0 rgba(222, 89, 152, 0)")}
@@ -906,6 +1019,31 @@ const Home = () => {
 					<span>Moses Sumney</span>
 			</div>
 			{/* </ImgTitle12> */}
+			<div className={nav}>
+				<ul className={navLinks}>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Work</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</div>
+			<div className={gridLines1}>
+				<div className={grid1}></div>
+				<div className={grid2}></div>
+				<div className={grid3}></div>
+				<div className={grid4}></div>
+				<div className={grid5}></div>
+				<div className={grid6}></div>
+				<div className={grid7}></div>
+				<div className={grid8}></div>
+				<div className={grid9}></div>
+			</div>
+			<div className={gridLines2}>
+				<div className={grid10}></div>
+				<div className={grid11}></div>
+				<div className={grid12}></div>
+				<div className={grid13}></div>
+			</div>
 
 		</div>
     	)
