@@ -689,8 +689,54 @@ const Home = () => {
     	}
 	`;
 
+	// nav styling
+
+	const nav = css`
+		display: block;
+		width: 100%;
+		position: fixed;
+		text-transform: uppercase;
+		top: 25px;
+		z-index: 1000;
+		opacity: 1;
+	`;
+
+	const navLinks = css`
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		& li {
+			margin-right: 20px;
+			cursor: pointer;
+			font-weight: 700;
+		}
+		& li a {
+			text-decoration: none;
+			color: black;
+			transition: 0.2s ease-in;
+			font-size: 16px;
+			letter-spacing: 1.5px;
+		}
+		& li a:hover {
+			color: red;
+			letter-spacing: 4px;
+			text-decoration: line-through;
+		}
+	`;
+
     return (
         <div className={container}>
+			<div className={nav}>
+				<ul className={navLinks}>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Work</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</div>
 			{/* <Box1 */}
 			<div className={box1}
 				onMouseEnter={() => setStyle("rgba(222, 89, 152, 1)", "inset 0 0 0 20px rgba(222, 89, 152, 1)")}
