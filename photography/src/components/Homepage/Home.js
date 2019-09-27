@@ -70,6 +70,7 @@ const Home = () => {
 	const [boxShadow11, setBoxShadow11] = useState("inset 0 0 0 0 rgba(255, 56, 240, 0)");
 	const [boxShadow12, setBoxShadow12] = useState("inset 0 0 0 0 rgba(106, 116, 115, 0)");
 	const [background1, setBackground1] = useState("rgba(255, 255, 255, 0)");
+	const [fontOpacity, setFontOpacity] = useState("1");
 
 	// we create set functions to call upon mouse events in the return()
 
@@ -80,7 +81,7 @@ const Home = () => {
 		setBoxShadow1(boxShadow1);
 	};
 
-	const setClickStyle = (boxShadow1, background1) => {
+	const setClickStyle = (boxShadow1, background1, fontOpacity) => {
 		setBoxShadow1(boxShadow1);
 		setBoxShadow2(boxShadow1);
 		setBoxShadow3(boxShadow1);
@@ -94,7 +95,7 @@ const Home = () => {
 		setBoxShadow11(boxShadow1);
 		setBoxShadow12(boxShadow1);
 		setBackground1(background1);
-
+		setFontOpacity(fontOpacity);
 	};
 
 	// box 2 mouse events
@@ -364,6 +365,7 @@ const Home = () => {
     	background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
 	`;
 
+
 	// consistent img div box & text styling to shorten code / make more readable
 
 	const imgStyle = css`
@@ -399,6 +401,7 @@ const Home = () => {
     	cursor: pointer;
 		& span {
 			transition: .2s ease;
+			opacity: ${fontOpacity};
 		}
 	`;
 
@@ -692,7 +695,7 @@ const Home = () => {
 			<div className={box1}
 				onMouseEnter={() => setStyle("rgba(222, 89, 152, 1)", "inset 0 0 0 20px rgba(222, 89, 152, 1)")}
 				onMouseOut={() => setStyle("rgba(0,0,0,1)", "inset 0 0 0 0 rgba(222, 89, 152, 0)")}
-				onClick={() => setClickStyle("inset 0 0 0 100vw rgba(222, 89, 152, 1)", "rgba(222, 89, 152, 1)")}
+				onClick={() => setClickStyle("inset 0 0 0 100vw rgba(222, 89, 152, 1)", "rgba(222, 89, 152, 1)", "0")}
 				>
                 <img src= {Travis} alt="la flame"/>
 			</div>
