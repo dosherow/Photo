@@ -76,9 +76,8 @@ const Home = () => {
 
 	// box1 mouse events
 
-	const setStyle = (fontColor, boxShadow1) => {
+	const setStyle = (fontColor) => {
 		setFontColor(fontColor);
-		setBoxShadow1(boxShadow1);
 	};
 
 	const setClickStyle = (boxShadow1, background1, fontOpacity) => {
@@ -405,14 +404,7 @@ const Home = () => {
 		}
 	`;
 
-
-	// box1 styling 
-
-	const box1 = css`
-		${boxStyles};
-		top: 16.66vw;
-		width: 41.65vw;
-		${'' /* box-shadow: ${boxShadow1}; */}
+	const hoverEffect = css`
 		:hover img {
 			transform: matrix(1.1, 0, 0, 1.1, 0, 0);
 			${'' /* z-index: 100 !important; */}
@@ -436,6 +428,16 @@ const Home = () => {
 			transform: matrix(1,0,0,1,0,0);
 			height: 30px;
 		}
+	`;
+
+
+	// box1 styling 
+
+	const box1 = css`
+		${boxStyles};
+		top: 16.66vw;
+		width: 41.65vw;
+		${hoverEffect};
 		& img {
 			${imgStyle};
 		}
@@ -457,20 +459,10 @@ const Home = () => {
 		${boxStyles};
     	left: 41.65vw;
     	width: 58.35vw;
-    	${'' /* box-shadow: ${boxShadow2}; */}
-		:hover img {
-			transform: matrix(1.1, 0, 0, 1.1, 0, 0);
+		${hoverEffect};
+		& img {
+			${imgStyle};
 		}
-		:hover {
-			z-index: 100 !important;
-		}
-		:hover div {
-			transform: matrix(1,0,0,1,0,0);
-			height: 30px;
-		}
-    	& img {
-        	${imgStyle};
-    	}
 	`;
 
 	const imgTitle2 = css`
@@ -489,10 +481,10 @@ const Home = () => {
 		${boxStyles};
     	left: 8.33vw;
     	width: 24.99vw;
-    	box-shadow: ${boxShadow3};
-    	& img {
-        	${imgStyle};
-    	}
+    	${hoverEffect};
+		& img {
+			${imgStyle};
+		}
 	`;
 
 	const imgTitle3 = css`
@@ -512,10 +504,10 @@ const Home = () => {
     	top: -8.333vw;
     	left: 33.3vw;
     	width: 33.332vw;
-    	box-shadow: ${boxShadow4};
-    	& img {
-        	${imgStyle};
-    	}
+    	${hoverEffect};
+		& img {
+			${imgStyle};
+		}
 	`;
 
 	const imgTitle4 = css`
@@ -537,10 +529,10 @@ const Home = () => {
     	top: -24.99vw;
     	left: 66.6vw;
     	width: 24.99vw;
-    	box-shadow: ${boxShadow5};
-    	& img {
-        	${imgStyle};
-    	}
+    	${hoverEffect};
+		& img {
+			${imgStyle};
+		}
 	`;
 	
 	const imgTitle5 = css`
@@ -560,10 +552,10 @@ const Home = () => {
 		${boxStyles};
     	top: -24.99vw;
     	width: 58.31vw;
-    	box-shadow: ${boxShadow6};
-    	& img {
-        	${imgStyle};
-    	}
+    	${hoverEffect};
+		& img {
+			${imgStyle};
+		}
 	`;
 
 	const imgTitle6 = css`
@@ -583,10 +575,10 @@ const Home = () => {
     	top: -41.65vw;
     	left: 58.33vw;
     	width: 41.65vw;
-    	box-shadow: ${boxShadow7};
-    	& img {
-        	${imgStyle};
-    	}
+		${hoverEffect};
+		& img {
+			${imgStyle};
+		}
 	`;
 
 	const imgTitle7 = css`
@@ -607,10 +599,10 @@ const Home = () => {
     	top: -41.65vw;
     	left: 8.33vw;
     	width: 33.32vw;
-    	box-shadow: ${boxShadow8};
-    	& img {
-        	${imgStyle};
-    	}
+    	${hoverEffect};
+		& img {
+			${imgStyle};
+		}
 	`;
 
 	const imgTitle8 = css`
@@ -631,10 +623,10 @@ const Home = () => {
     	top: -58.31vw;
     	left: 41.65vw;
     	width: 24.96vw;
-    	box-shadow: ${boxShadow9};
-    	& img {
-        	${imgStyle};
-    	}
+    	${hoverEffect};
+		& img {
+			${imgStyle};
+		}
 	`;
 
 	const imgTitle9 = css`
@@ -656,10 +648,10 @@ const Home = () => {
     	top: -66.64vw;
     	left: 66.6vw;
     	width: 24.99vw;
-    	box-shadow: ${boxShadow10};
-    	& img {
-        	${imgStyle};
-    	}
+    	${hoverEffect};
+		& img {
+			${imgStyle};
+		}
 	`;
 
 	const imgTitle10 = css`
@@ -680,10 +672,10 @@ const Home = () => {
     	left: 49.98vw;
     	top: -58.31vw;
     	width: 49.998vw;
-    	box-shadow: ${boxShadow11};
-    	& img {
-        	${imgStyle};
-    	}
+    	${hoverEffect};
+		& img {
+			${imgStyle};
+		}
 	`;
 
 	const imgTitle11 = css`
@@ -705,10 +697,10 @@ const Home = () => {
     	left: 8.33vw;
     	top: -74.97vw;
     	width: 41.65vw;
-   	 	box-shadow: ${boxShadow12};
-    	& img {
-        	${imgStyle};
-    	}
+		${hoverEffect};
+		& img {
+			${imgStyle};
+		}
 	`;
 
 	const imgTitle12 = css`
@@ -875,60 +867,55 @@ const Home = () => {
 
 	// attempting to do box-shadow inset effect with 4 divs 
 
-	const topLine = css`
-		transform: matrix(1,0,0,0,0,0);
+	const lineStyles = css`
 		display: block;
 		position: absolute;
-		top: 0;
 		background-color: red;
+		transition: 0.35s ease-in;
+	`
+
+	const topLine = css`
+		transform: matrix(1,0,0,0,0,0);
+		${lineStyles};
+		top: 0;
 		transform-origin: top;
 		left: 0;
 		margin-top: -1px;
 		width: 100%;
 		height: 1px;
-		transition: 0.2s ease-in;
 	`;
 
 	const rightLine = css`
 		transform: matrix(0,0,0,1,0,0);
-		display: block;
-		position: absolute;
+		${lineStyles};
 		top: 0;
-		background-color: red;
 		transform-origin: right;
 		left: 0;
 		margin-right: -1px;
 		height: 100%;
 		width: 1px;
-		transition: 0.2s ease-in;
 	`;
 
 	const leftLine = css`
 		transform: matrix(0,0,0,1,0,0);
-		display: block;
-		position: absolute;
+		${lineStyles};
 		top: 0;
-		background-color: red;
 		transform-origin: left;
 		right: 0;
 		margin-left: -1px;
 		height: 100%;
 		width: 1px;
-		transition: 0.2s ease-in;
 	`;
 
 	const botLine = css`
 		transform: matrix(1,0,0,0,0,0);
-		display: block;
-		position: absolute;
+		${lineStyles};
 		bottom: 0;
-		background-color: red;
 		transform-origin: bottom;
 		left: 0;
 		margin-bottom: -1px;
 		width: 100%;
 		height: 1px;
-		transition: 0.2s ease-in;
 	`;
 
 
@@ -939,8 +926,8 @@ const Home = () => {
 			{/* <Box1 */}
 
 			<div className={box1}
-				// onMouseEnter={() => setStyle("rgba(222, 89, 152, 1)", "inset 0 0 0 20px rgba(222, 89, 152, 1)")}
-				// onMouseOut={() => setStyle("rgba(0,0,0,1)", "inset 0 0 0 0 rgba(222, 89, 152, 0)")}
+				onMouseEnter={() => setStyle("rgba(222, 89, 152, 1)")}
+				onMouseOut={() => setStyle("rgba(0,0,0,1)")}
 				// onClick={() => setClickStyle("inset 0 0 0 100vw rgba(222, 89, 152, 1)", "rgba(222, 89, 152, 1)", "0")}
 				>
                 <img src= {Travis} alt="la flame"/>
@@ -957,11 +944,15 @@ const Home = () => {
 			</div>
 			{/* <Box2 */}
 			<div className={box2}
-				onMouseEnter={() => setStyle2("rgba(84, 86, 101, 1)", "inset 0 0 0 20px rgba(84, 86, 101, 1)")}
-				onMouseOut={() => setStyle2("rgba(0,0,0,1)", "inset 0 0 0 0 rgba(84, 86, 101, 0)")}
-				onClick={() => setClickStyle2("inset 0 0 0 100vw rgba(84, 86, 101, 1)", "rgba(84, 86, 101, 1)")}
+				onMouseEnter={() => setStyle2("rgba(84, 86, 101, 1)")}
+				onMouseOut={() => setStyle2("rgba(0,0,0,1)")}
+				// onClick={() => setClickStyle2("inset 0 0 0 100vw rgba(84, 86, 101, 1)", "rgba(84, 86, 101, 1)")}
 			>
                 <img src= {Bryson} alt="bryson tiller"/>
+				<div className={topLine}></div>
+				<div className={rightLine}></div>
+				<div className={leftLine}></div>
+				<div className={botLine}></div>
 			</div>
             {/* </Box2> */}
 			<div className={imgTitle2}>
@@ -971,11 +962,15 @@ const Home = () => {
 			</div>
 			{/* <Box3 */}
 			<div className={box3}
-				onMouseEnter={() => setStyle3("rgba(100, 130, 66, 1)", "inset 0 0 0 20px rgba(100, 130, 66, 1)")}
-				onMouseOut={() => setStyle3("rgba(0,0,0,1)", "inset 0 0 0 0 rgba(100, 130, 66, 0)")}
-				onClick={() => setClickStyle3("inset 0 0 0 100vw rgba(100, 130, 66, 1)", "rgba(100, 130, 66, 1)")}
+				// onMouseEnter={() => setStyle3("rgba(100, 130, 66, 1)", "inset 0 0 0 20px rgba(100, 130, 66, 1)")}
+				// onMouseOut={() => setStyle3("rgba(0,0,0,1)", "inset 0 0 0 0 rgba(100, 130, 66, 0)")}
+				// onClick={() => setClickStyle3("inset 0 0 0 100vw rgba(100, 130, 66, 1)", "rgba(100, 130, 66, 1)")}
 			>
                 <img src= {Mura} alt="mura masa"/>
+				<div className={topLine}></div>
+				<div className={rightLine}></div>
+				<div className={leftLine}></div>
+				<div className={botLine}></div>
 			</div>
             {/* </Box3> */}
 			{/* <ImgTitle3> */}
@@ -985,11 +980,15 @@ const Home = () => {
 			{/* </ImgTitle3> */}
 			{/* <Box4 */}
 			<div className={box4}
-				onMouseEnter={() => setStyle4("rgba(84, 86, 101, 1)", "inset 0 0 0 20px rgba(84, 86, 101, 1)")}
-				onMouseOut={() => setStyle4("rgba(0,0,0,1)", "inset 0 0 0 0 rgba(84, 86, 101, 0)")}
-				onClick={() => setClickStyle4("inset 0 0 0 100vw rgba(84, 86, 101, 1)", "rgba(84, 86, 101, 1)")}
+				// onMouseEnter={() => setStyle4("rgba(84, 86, 101, 1)", "inset 0 0 0 20px rgba(84, 86, 101, 1)")}
+				// onMouseOut={() => setStyle4("rgba(0,0,0,1)", "inset 0 0 0 0 rgba(84, 86, 101, 0)")}
+				// onClick={() => setClickStyle4("inset 0 0 0 100vw rgba(84, 86, 101, 1)", "rgba(84, 86, 101, 1)")}
 			>
                 <img src= {Anderson} alt="anderson paak"/>
+				<div className={topLine}></div>
+				<div className={rightLine}></div>
+				<div className={leftLine}></div>
+				<div className={botLine}></div>
 			</div>
             {/* </Box4> */}
 			{/* <ImgTitle4> */}
@@ -999,11 +998,15 @@ const Home = () => {
 			{/* </ImgTitle4> */}
 			{/* <Box5 */}
 			<div className={box5}
-				onMouseEnter={() => setStyle5("rgba(254, 193, 100, 1)", "inset 0 0 0 20px rgba(254, 193, 100, 1)")}
-				onMouseOut={() => setStyle5("rgba(0,0,0,1)", "inset 0 0 0 0 rgba(254, 193, 100, 0)")}
-				onClick={() => setClickStyle5("inset 0 0 0 100vw rgba(254, 193, 100, 1)", "rgba(254, 193, 100, 1)")}
+				// onMouseEnter={() => setStyle5("rgba(254, 193, 100, 1)", "inset 0 0 0 20px rgba(254, 193, 100, 1)")}
+				// onMouseOut={() => setStyle5("rgba(0,0,0,1)", "inset 0 0 0 0 rgba(254, 193, 100, 0)")}
+				// onClick={() => setClickStyle5("inset 0 0 0 100vw rgba(254, 193, 100, 1)", "rgba(254, 193, 100, 1)")}
 			>
                 <img src= {Majid} alt="majid jordan"/>
+				<div className={topLine}></div>
+				<div className={rightLine}></div>
+				<div className={leftLine}></div>
+				<div className={botLine}></div>
 			</div>
             {/* </Box5> */}
 			{/* <ImgTitle5> */}
@@ -1013,11 +1016,15 @@ const Home = () => {
 			{/* </ImgTitle5> */}
 			{/* <Box6 */}
 			<div className={box6}
-				onMouseEnter={() => setStyle6("rgba(239, 240, 198, 1)", "inset 0 0 0 20px rgba(239, 240, 198, 1)")}
-				onMouseOut={() => setStyle6("rgba(0,0,0,1)", "inset 0 0 0 0 rgba(239, 240, 198, 0)")}
-				onClick={() => setClickStyle6("inset 0 0 0 100vw rgba(239, 240, 198, 1)", "rgba(239, 240, 198, 1)")}
+				// onMouseEnter={() => setStyle6("rgba(239, 240, 198, 1)", "inset 0 0 0 20px rgba(239, 240, 198, 1)")}
+				// onMouseOut={() => setStyle6("rgba(0,0,0,1)", "inset 0 0 0 0 rgba(239, 240, 198, 0)")}
+				// onClick={() => setClickStyle6("inset 0 0 0 100vw rgba(239, 240, 198, 1)", "rgba(239, 240, 198, 1)")}
 			>
                 <img src= {Black} alt="6lack"/>
+				<div className={topLine}></div>
+				<div className={rightLine}></div>
+				<div className={leftLine}></div>
+				<div className={botLine}></div>
 			</div>
             {/* </Box6> */}
 			{/* <ImgTitle6> */}
@@ -1027,11 +1034,15 @@ const Home = () => {
 			{/* </ImgTitle6> */}
 			{/* <Box7 */}
 			<div className={box7}
-				onMouseEnter={() => setStyle7("rgba(92, 145, 223, 1)", "inset 0 0 0 20px rgba(92, 145, 223, 1)")}
-				onMouseOut={() => setStyle7("rgba(0,0,0,1)", "inset 0 0 0 0 rgba(92, 145, 223, 0)")}
-				onClick={() => setClickStyle7("inset 0 0 0 100vw rgba(92, 145, 223, 1)", "rgba(92, 145, 223, 1)")}
+				// onMouseEnter={() => setStyle7("rgba(92, 145, 223, 1)", "inset 0 0 0 20px rgba(92, 145, 223, 1)")}
+				// onMouseOut={() => setStyle7("rgba(0,0,0,1)", "inset 0 0 0 0 rgba(92, 145, 223, 0)")}
+				// onClick={() => setClickStyle7("inset 0 0 0 100vw rgba(92, 145, 223, 1)", "rgba(92, 145, 223, 1)")}
 			>
                 <img src= {KK} alt="king krule"/>
+				<div className={topLine}></div>
+				<div className={rightLine}></div>
+				<div className={leftLine}></div>
+				<div className={botLine}></div>
 			</div>
             {/* </Box7> */}
 			{/* <ImgTitle7> */}
@@ -1041,11 +1052,15 @@ const Home = () => {
 			{/* </ImgTitle7> */}
 			{/* <Box8 */}
 			<div className={box8}
-				onMouseEnter={() => setStyle8("rgba(84, 86, 101, 1)", "inset 0 0 0 20px rgba(84, 86, 101, 1)")}
-				onMouseOut={() => setStyle8("rgba(0,0,0,1)", "inset 0 0 0 0 rgba(84, 86, 101, 0)")}
-				onClick={() => setClickStyle8("inset 0 0 0 100vw rgba(84, 86, 101, 1)", "rgba(84, 85, 101, 1)")}
+				// onMouseEnter={() => setStyle8("rgba(84, 86, 101, 1)", "inset 0 0 0 20px rgba(84, 86, 101, 1)")}
+				// onMouseOut={() => setStyle8("rgba(0,0,0,1)", "inset 0 0 0 0 rgba(84, 86, 101, 0)")}
+				// onClick={() => setClickStyle8("inset 0 0 0 100vw rgba(84, 86, 101, 1)", "rgba(84, 85, 101, 1)")}
 			>
                 <img src= {Earl} alt="Earl Sweatshirt"/>
+				<div className={topLine}></div>
+				<div className={rightLine}></div>
+				<div className={leftLine}></div>
+				<div className={botLine}></div>
 			</div>
             {/* </Box8> */}
 			{/* <ImgTitle8> */}
@@ -1055,11 +1070,15 @@ const Home = () => {
 			{/* </ImgTitle8> */}
 			{/* <Box9 */}
 			<div className={box9}
-				onMouseEnter={() => setStyle9("rgba(59, 61, 47, 1)", "inset 0 0 0 20px rgba(59, 61, 47, 1)")}
-				onMouseOut={() => setStyle9("rgba(0,0,0,1)", "inset 0 0 0 0 rgba(59, 61, 47, 0)")}
-				onClick={() => setClickStyle9("inset 0 0 0 100vw rgba(59, 61, 47, 1)", "rgba(59, 61, 47, 1)")}
+				// onMouseEnter={() => setStyle9("rgba(59, 61, 47, 1)", "inset 0 0 0 20px rgba(59, 61, 47, 1)")}
+				// onMouseOut={() => setStyle9("rgba(0,0,0,1)", "inset 0 0 0 0 rgba(59, 61, 47, 0)")}
+				// onClick={() => setClickStyle9("inset 0 0 0 100vw rgba(59, 61, 47, 1)", "rgba(59, 61, 47, 1)")}
 			>
                 <img src= {Vince} alt="Vince Staples"/>
+				<div className={topLine}></div>
+				<div className={rightLine}></div>
+				<div className={leftLine}></div>
+				<div className={botLine}></div>
 			</div>
             {/* </Box9> */}
 			{/* <ImgTitle9> */}
@@ -1069,11 +1088,15 @@ const Home = () => {
 			{/* </ImgTitle9> */}
 			{/* <Box10 */}
 			<div className={box10}
-				onMouseEnter={() => setStyle10("rgba(81, 104, 112, 1)", "inset 0 0 0 20px rgba(81, 104, 112, 1)")}
-				onMouseOut={() => setStyle10("rgba(0,0,0,1)", "inset 0 0 0 0 rgba(81, 104, 112, 0)")}
-				onClick={() => setClickStyle10("inset 0 0 0 100vw rgba(81, 104, 112, 1)", "rgba(81, 104, 112, 1)")}
+				// onMouseEnter={() => setStyle10("rgba(81, 104, 112, 1)", "inset 0 0 0 20px rgba(81, 104, 112, 1)")}
+				// onMouseOut={() => setStyle10("rgba(0,0,0,1)", "inset 0 0 0 0 rgba(81, 104, 112, 0)")}
+				// onClick={() => setClickStyle10("inset 0 0 0 100vw rgba(81, 104, 112, 1)", "rgba(81, 104, 112, 1)")}
 			>
                 <img src= {Mac} alt="Mac Demarco"/>
+				<div className={topLine}></div>
+				<div className={rightLine}></div>
+				<div className={leftLine}></div>
+				<div className={botLine}></div>
 			</div>
             {/* </Box10> */}
 			{/* <ImgTitle10> */}
@@ -1083,11 +1106,15 @@ const Home = () => {
 			{/* </ImgTitle10> */}
 			{/* <Box11 */}
 			<div className={box11}
-				onMouseEnter={() => setStyle11("rgba(255, 56, 240, 1)", "inset 0 0 0 20px rgba(255, 56, 240, 1)")}
-				onMouseOut={() => setStyle11("rgba(0,0,0,1)", "inset 0 0 0 0 rgba(255, 56, 240, 0)")}
-				onClick={() => setClickStyle11("inset 0 0 0 100vw rgba(255, 56, 240, 1)", "rgba(255, 56, 240, 1)")}
+				// onMouseEnter={() => setStyle11("rgba(255, 56, 240, 1)", "inset 0 0 0 20px rgba(255, 56, 240, 1)")}
+				// onMouseOut={() => setStyle11("rgba(0,0,0,1)", "inset 0 0 0 0 rgba(255, 56, 240, 0)")}
+				// onClick={() => setClickStyle11("inset 0 0 0 100vw rgba(255, 56, 240, 1)", "rgba(255, 56, 240, 1)")}
 			>
                 <img src= {Jcole} alt="J Cole"/>
+				<div className={topLine}></div>
+				<div className={rightLine}></div>
+				<div className={leftLine}></div>
+				<div className={botLine}></div>
 			</div>
             {/* </Box11> */}
 			{/* <ImgTitle11> */}
@@ -1097,12 +1124,16 @@ const Home = () => {
 			{/* </ImgTitle11> */}
 			{/* <Box12 */}
 			<div className={box12}
-				onMouseEnter={() => setStyle12("rgba(106, 116, 115, 1)", "inset 0 0 0 20px rgba(106, 116, 115, 1)")}
-				onMouseOut={() => setStyle12("rgba(0,0,0,1)", "inset 0 0 0 0 rgba(106, 116, 115, 0)")}
-				onClick={() => setClickStyle12("inset 0 0 0 100vw rgba(106, 116, 115, 1)", "rgba(106, 116, 115, 1)")}
+				// onMouseEnter={() => setStyle12("rgba(106, 116, 115, 1)", "inset 0 0 0 20px rgba(106, 116, 115, 1)")}
+				// onMouseOut={() => setStyle12("rgba(0,0,0,1)", "inset 0 0 0 0 rgba(106, 116, 115, 0)")}
+				// onClick={() => setClickStyle12("inset 0 0 0 100vw rgba(106, 116, 115, 1)", "rgba(106, 116, 115, 1)")}
 
 			>
                 <img src= {Moses} alt="Moses Sumney"/>
+				<div className={topLine}></div>
+				<div className={rightLine}></div>
+				<div className={leftLine}></div>
+				<div className={botLine}></div>
 			</div>
             {/* </Box12> */}
 			{/* <ImgTitle12> */}
