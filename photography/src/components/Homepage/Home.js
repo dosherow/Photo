@@ -412,9 +412,29 @@ const Home = () => {
 		${boxStyles};
 		top: 16.66vw;
 		width: 41.65vw;
-		box-shadow: ${boxShadow1};
+		${'' /* box-shadow: ${boxShadow1}; */}
 		:hover img {
+			transform: matrix(1.1, 0, 0, 1.1, 0, 0);
+			${'' /* z-index: 100 !important; */}
+		}
+		:hover {
 			z-index: 100 !important;
+		}
+		:hover div:nth-child(2) {
+			transform: matrix(1,0,0,1,0,0);
+			height: 30px;
+		}
+		:hover div:nth-child(3) {
+			transform: matrix(1,0,0,1,0,0);
+			width: 30px;
+		}
+		:hover div:nth-child(4) {
+			transform: matrix(1,0,0,1,0,0);
+			width: 30px;
+		}
+		:hover div:nth-child(5) {
+			transform: matrix(1,0,0,1,0,0);
+			height: 30px;
 		}
 		& img {
 			${imgStyle};
@@ -437,7 +457,17 @@ const Home = () => {
 		${boxStyles};
     	left: 41.65vw;
     	width: 58.35vw;
-    	box-shadow: ${boxShadow2};
+    	${'' /* box-shadow: ${boxShadow2}; */}
+		:hover img {
+			transform: matrix(1.1, 0, 0, 1.1, 0, 0);
+		}
+		:hover {
+			z-index: 100 !important;
+		}
+		:hover div {
+			transform: matrix(1,0,0,1,0,0);
+			height: 30px;
+		}
     	& img {
         	${imgStyle};
     	}
@@ -843,20 +873,81 @@ const Home = () => {
 		background-color: red;
 	`;
 
-	// attempting to fix images with z-index
+	// attempting to do box-shadow inset effect with 4 divs 
+
+	const topLine = css`
+		transform: matrix(1,0,0,0,0,0);
+		display: block;
+		position: absolute;
+		top: 0;
+		background-color: red;
+		transform-origin: top;
+		left: 0;
+		margin-top: -1px;
+		width: 100%;
+		height: 1px;
+		transition: 0.2s ease-in;
+	`;
+
+	const rightLine = css`
+		transform: matrix(0,0,0,1,0,0);
+		display: block;
+		position: absolute;
+		top: 0;
+		background-color: red;
+		transform-origin: right;
+		left: 0;
+		margin-right: -1px;
+		height: 100%;
+		width: 1px;
+		transition: 0.2s ease-in;
+	`;
+
+	const leftLine = css`
+		transform: matrix(0,0,0,1,0,0);
+		display: block;
+		position: absolute;
+		top: 0;
+		background-color: red;
+		transform-origin: left;
+		right: 0;
+		margin-left: -1px;
+		height: 100%;
+		width: 1px;
+		transition: 0.2s ease-in;
+	`;
+
+	const botLine = css`
+		transform: matrix(1,0,0,0,0,0);
+		display: block;
+		position: absolute;
+		bottom: 0;
+		background-color: red;
+		transform-origin: bottom;
+		left: 0;
+		margin-bottom: -1px;
+		width: 100%;
+		height: 1px;
+		transition: 0.2s ease-in;
+	`;
 
 
+	
 
     return (
         <div className={container}>
 			{/* <Box1 */}
 
 			<div className={box1}
-				onMouseEnter={() => setStyle("rgba(222, 89, 152, 1)", "inset 0 0 0 20px rgba(222, 89, 152, 1)")}
-				onMouseOut={() => setStyle("rgba(0,0,0,1)", "inset 0 0 0 0 rgba(222, 89, 152, 0)")}
-				onClick={() => setClickStyle("inset 0 0 0 100vw rgba(222, 89, 152, 1)", "rgba(222, 89, 152, 1)", "0")}
+				// onMouseEnter={() => setStyle("rgba(222, 89, 152, 1)", "inset 0 0 0 20px rgba(222, 89, 152, 1)")}
+				// onMouseOut={() => setStyle("rgba(0,0,0,1)", "inset 0 0 0 0 rgba(222, 89, 152, 0)")}
+				// onClick={() => setClickStyle("inset 0 0 0 100vw rgba(222, 89, 152, 1)", "rgba(222, 89, 152, 1)", "0")}
 				>
                 <img src= {Travis} alt="la flame"/>
+				<div className={topLine}></div>
+				<div className={rightLine}></div>
+				<div className={leftLine}></div>
+				<div className={botLine}></div>
 			</div>
             {/* </Box1> */}
 			<div className={imgTitle1}>
