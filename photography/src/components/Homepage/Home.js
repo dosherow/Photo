@@ -1,32 +1,51 @@
 import React, { Component, useState } from 'react';
-import { css } from 'emotion';
 
 import Container from './Container';
-// import GridGroup from './grid/GridGroup';
-import Box1 from './Box1';
-import Box2 from './Box2';
-import Box3 from './Box3';
-import Box4 from './Box4';
-import Box5 from './Box5';
-import Box6 from './Box6';
-import Box7 from './Box7';
-import Box8 from './Box8';
-import Box9 from './Box9';
-import Box10 from './Box10';
-import Box11 from './Box11';
-import Box12 from './Box12';
-import ImgTitle1 from './ImgTitle1';
-import ImgTitle2 from './ImgTitle2';
-import ImgTitle3 from './ImgTitle3';
-import ImgTitle4 from './ImgTitle4';
-import ImgTitle5 from './ImgTitle5';
-import ImgTitle6 from './ImgTitle6';
-import ImgTitle7 from './ImgTitle7';
-import ImgTitle8 from './ImgTitle8';
-import ImgTitle9 from './ImgTitle9';
-import ImgTitle10 from './ImgTitle10';
-import ImgTitle11 from './ImgTitle11';
-import ImgTitle12 from './ImgTitle12';
+import Box1 from './boxes/Box1';
+import Box2 from './boxes/Box2';
+import Box3 from './boxes/Box3';
+import Box4 from './boxes/Box4';
+import Box5 from './boxes/Box5';
+import Box6 from './boxes/Box6';
+import Box7 from './boxes/Box7';
+import Box8 from './boxes/Box8';
+import Box9 from './boxes/Box9';
+import Box10 from './boxes/Box10';
+import Box11 from './boxes/Box11';
+import Box12 from './boxes/Box12';
+import ImgTitle1 from './imgTitles/ImgTitle1';
+import ImgTitle2 from './imgTitles/ImgTitle2';
+import ImgTitle3 from './imgTitles/ImgTitle3';
+import ImgTitle4 from './imgTitles/ImgTitle4';
+import ImgTitle5 from './imgTitles/ImgTitle5';
+import ImgTitle6 from './imgTitles/ImgTitle6';
+import ImgTitle7 from './imgTitles/ImgTitle7';
+import ImgTitle8 from './imgTitles/ImgTitle8';
+import ImgTitle9 from './imgTitles/ImgTitle9';
+import ImgTitle10 from './imgTitles/ImgTitle10';
+import ImgTitle11 from './imgTitles/ImgTitle11';
+import ImgTitle12 from './imgTitles/ImgTitle12';
+import TopLine from './imgHovers/TopLine';
+import BotLine from './imgHovers/BotLine';
+import LeftLine from './imgHovers/LeftLine';
+import RightLine from './imgHovers/RightLine';
+import Nav from './nav/Nav';
+import NavLinks from './nav/NavLinks';
+import GridLines1 from './grid/GridLines1';
+import GridLines2 from './grid/GridLines2';
+import Grid1 from './grid/Grid1';
+import Grid2 from './grid/Grid2';
+import Grid3 from './grid/Grid3';
+import Grid4 from './grid/Grid4';
+import Grid5 from './grid/Grid5';
+import Grid6 from './grid/Grid6';
+import Grid7 from './grid/Grid7';
+import Grid8 from './grid/Grid8';
+import Grid9 from './grid/Grid9';
+import Grid10 from './grid/Grid10';
+import Grid11 from './grid/Grid11';
+import Grid12 from './grid/Grid12';
+import Grid13 from './grid/Grid13';
 import Travis from './imgs/travisscott2.jpg';
 import Bryson from './imgs/brysontiller3.jpg';
 import Mura from './imgs/muramasa6.jpg';
@@ -350,824 +369,180 @@ const Home = () => {
 		setBackground1(background1);
 	};
 
-	// outer container styling 
-
-	const container = css`
-		box-sizing: border-box;
-    	margin: 0;
-    	padding: 0;
-    	height: 100%;
-    	background-color: ${background1};
-		transition: background-color .6s ease-in;
-    	${'' /* background-image: linear-gradient(rgba(30, 30, 30, .85) 1px, transparent 1px), linear-gradient(90deg, rgba(30, 30, 30, .85) 1px, transparent 1px), linear-gradient(rgba(30, 30, 30, .2) 1px, transparent 1px), linear-gradient(90deg, rgba(30, 30, 30, .2) 1px, transparent 1px);
-    	background-size: 33.333vh 50vh, 33.333vw 50vw, 8.333vw 8.333vw, 8.333vw 8.333vw;
-    	background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px; */}
-	`;
-
-
-	// consistent img div box & text styling to shorten code / make more readable
-
-	const imgStyle = css`
-		position: relative;
-		display: inline-block;
-		width: 100%;
-		height: auto;
-		z-index: -10;
-		transition: 0.35s ease-in-out;
-		transform: matrix(1, 0, 0, 1, 0, 0);
-		:hover {
-			transform: matrix(1.1, 0, 0, 1.1, 0, 0);
-		}
-	`;
-
-	const boxStyles = css`
-		position: relative;
-		height: auto;
-		cursor: pointer;
-		transition: 0.4s ease-in;
-		overflow: hidden;
-		display: block;
-	`;
-
-	const titleText = css`
-		position: relative;
-		font-weight: 500;
-    	position: relative;
-    	display: inline-block;
-    	font-size: 2.07vw;
-    	line-height: 2vw;
-    	text-transform: uppercase;
-    	cursor: pointer;
-		& span {
-			transition: .2s ease;
-			opacity: ${fontOpacity};
-		}
-	`;
-
-	const hoverEffect = css`
-		:hover img {
-			transform: matrix(1.1, 0, 0, 1.1, 0, 0);
-			${'' /* z-index: 100 !important; */}
-		}
-		:hover {
-			z-index: 100 !important;
-		}
-		:hover div:nth-child(2) {
-			transform: matrix(1,0,0,1,0,0);
-			height: 30px;
-		}
-		:hover div:nth-child(3) {
-			transform: matrix(1,0,0,1,0,0);
-			width: 30px;
-		}
-		:hover div:nth-child(4) {
-			transform: matrix(1,0,0,1,0,0);
-			width: 30px;
-		}
-		:hover div:nth-child(5) {
-			transform: matrix(1,0,0,1,0,0);
-			height: 30px;
-		}
-	`;
-
-
-	// box1 styling 
-
-	const box1 = css`
-		${boxStyles};
-		top: 16.66vw;
-		width: 41.65vw;
-		${hoverEffect};
-		& img {
-			${imgStyle};
-		}
-	`;
-
-	const imgTitle1 = css`
-		${titleText};
-    	top: 16.66vw;
-    	padding-top: 9px;
-    	margin-left: 4px;
-    	& span {
-      		color: ${fontColor};
-    	}
-	`;
-
-	// box2 styling
-
-	const box2 = css`
-		${boxStyles};
-    	left: 41.65vw;
-    	width: 58.35vw;
-		${hoverEffect};
-		& img {
-			${imgStyle};
-		}
-	`;
-
-	const imgTitle2 = css`
-	    ${titleText};
-    	left: 41.65vw;
-    	padding-top: 9px;
-    	margin-left: 4px;
-    	& span {
-      		color: ${fontColor2};
-    	}
-	`; 
-
-	// box3 styling
-
-	const box3 = css`
-		${boxStyles};
-    	left: 8.33vw;
-    	width: 24.99vw;
-    	${hoverEffect};
-		& img {
-			${imgStyle};
-		}
-	`;
-
-	const imgTitle3 = css`
-		${titleText};
-    	left: 8.33vw;
-    	padding-top: 9px;
-    	margin-left: 4px;
-    	& span {
-      		color: ${fontColor3};
-    	}
-	`; 
-
-	// box4 styling
-
-	const box4 = css`
-		${boxStyles};
-    	top: -8.333vw;
-    	left: 33.3vw;
-    	width: 33.332vw;
-    	${hoverEffect};
-		& img {
-			${imgStyle};
-		}
-	`;
-
-	const imgTitle4 = css`
-		${titleText};
-    	top: -49.98vw;
-    	left: 58.31vw;
-    	padding-top: 4px;
-    	margin-left: 22px;
-    	transform: rotate(90deg);
-    	& span {
-      		color: ${fontColor4};
-    	}
-	`;
-
-	// box 5 styling
-
-	const box5 = css`
-		${boxStyles};
-    	top: -24.99vw;
-    	left: 66.6vw;
-    	width: 24.99vw;
-    	${hoverEffect};
-		& img {
-			${imgStyle};
-		}
-	`;
-	
-	const imgTitle5 = css`
-		${titleText};
-    	left: 66.64vw;
-    	top: -24.99vw;
-    	padding-top: 9px;
-    	margin-left: 4px;
-    	& span {
-      		color: ${fontColor5};
-    	}
-	`;
-
-	// box6 styling
-
-	const box6 = css`
-		${boxStyles};
-    	top: -24.99vw;
-    	width: 58.31vw;
-    	${hoverEffect};
-		& img {
-			${imgStyle};
-		}
-	`;
-
-	const imgTitle6 = css`
-		${titleText};
-    	top: -24.99vw;
-    	padding-top: 9px;
-    	margin-left: 4px;
-    	& span {
-      		color: ${fontColor6};
-    	}
-	`;
-
-	// box7 styling
-
-	const box7 = css`
-		${boxStyles};
-    	top: -41.65vw;
-    	left: 58.33vw;
-    	width: 41.65vw;
-		${hoverEffect};
-		& img {
-			${imgStyle};
-		}
-	`;
-
-	const imgTitle7 = css`
-		${titleText};
-    	top: -41.65vw;
-    	left: 58.31vw;
-    	padding-top: 9px;
-    	margin-left: 4px;
-    	& span {
-      		color: ${fontColor7};
-    	}
-	`;
-
-	// box8 styling
-
-	const box8 = css`
-		${boxStyles};
-    	top: -41.65vw;
-    	left: 8.33vw;
-    	width: 33.32vw;
-    	${hoverEffect};
-		& img {
-			${imgStyle};
-		}
-	`;
-
-	const imgTitle8 = css`
-		${titleText};
-    	left: 8.33vw;
-    	top: -41.65vw;
-    	padding-top: 9px;
-    	margin-left: 4px;
-    	& span {
-      		color: ${fontColor8};
-    	}
-	`;
-
-	// box9 styling
-
-	const box9 = css`
-		${boxStyles};
-    	top: -58.31vw;
-    	left: 41.65vw;
-    	width: 24.96vw;
-    	${hoverEffect};
-		& img {
-			${imgStyle};
-		}
-	`;
-
-	const imgTitle9 = css`
-		${titleText};
-    	top: -88.63vw;
-    	left: 58.31vw;
-    	padding-top: 4px;
-    	margin-left: 33px;
-    	transform: rotate(90deg);
-    	& span {
-      		color: ${fontColor9};
-    	}
-	`;
-
-	// box10 styling
-
-	const box10 = css`
-		${boxStyles};
-    	top: -66.64vw;
-    	left: 66.6vw;
-    	width: 24.99vw;
-    	${hoverEffect};
-		& img {
-			${imgStyle};
-		}
-	`;
-
-	const imgTitle10 = css`
-		${titleText};
-    	top: -66.64vw;
-    	left: 66.64vw;
-    	padding-top: 9px;
-    	margin-left: 4px;
-    	& span {
-      		color: ${fontColor10};
-    	}
-	`;
-
-	// box11 styling
-
-	const box11 = css`
-		${boxStyles};
-    	left: 49.98vw;
-    	top: -58.31vw;
-    	width: 49.998vw;
-    	${hoverEffect};
-		& img {
-			${imgStyle};
-		}
-	`;
-
-	const imgTitle11 = css`
-		${titleText};
-    	left: 41.65vw;
-    	top: -88.63vw;
-    	padding-top: 4px;
-    	margin-left: 33px;
-    	transform: rotate(-90deg);
-    	& span {
-      		color: ${fontColor11};
-    	}
-	`;
-
-	// box12 styling
-
-	const box12 = css`
-		${boxStyles};
-    	left: 8.33vw;
-    	top: -74.97vw;
-    	width: 41.65vw;
-		${hoverEffect};
-		& img {
-			${imgStyle};
-		}
-	`;
-
-	const imgTitle12 = css`
-		${titleText};
-    	left: 8.33vw;
-    	top: -74.97vw;
-    	padding-top: 9px;
-    	margin-left: 4px;
-    	& span {
-      		color: ${fontColor12};
-    	}
-	`;
-
-	// nav styling
-
-	const nav = css`
-		display: block;
-		width: 100%;
-		position: fixed;
-		text-transform: uppercase;
-		top: 25px;
-		z-index: 1000;
-		opacity: 1;
-	`;
-
-	const navLinks = css`
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-		list-style: none;
-		margin: 0;
-		padding: 0;
-		& li {
-			margin-right: 20px;
-			cursor: pointer;
-			font-weight: 700;
-		}
-		& li a {
-			text-decoration: none;
-			color: black;
-			transition: 0.2s ease-in;
-			font-size: 16px;
-			letter-spacing: 1.5px;
-		}
-		& li a:hover {
-			color: red;
-			letter-spacing: 4px;
-			text-decoration: line-through;
-		}
-	`;
-
-	// grid small opacity styling
-
-	const grid1Styles = css`
-		background-color: rgba(255,0,0,.1);
-		width: 1px;
-		position: absolute;
-		height: 100%;
-		top: 0;
-	`;
-
-	const gridLines1 = css`
-		opacity: 1;
-		position: absolute;
-		height: 100%;
-		top: 0;
-		z-index: -9;
-		width: 100%;
-		left: 0;
-		background: repeating-linear-gradient(180deg, transparent, transparent calc(8.3333vw - 1px), rgba(255,0,0,.1) calc(8.33333vw - 1px),rgba(255,0,0,.1) 8.33333vw);
-		background-image: repeating-linear-gradient(transparent, transparent calc(8.33333vw - 1px), rgba(255, 0, 0, 0.1) calc(8.33333vw - 1px), rgba(255, 0, 0, 0.1) 8.33333vw);
-	`;
-
-
-	const grid1 = css`
-		left: 8.33333vw;
-		${grid1Styles};
-	`;
-
-	const grid2 = css`
-		left: 16.66667vw;
-		${grid1Styles};
-	`;
-
-	const grid3 = css`
-		left: 25vw;
-		${grid1Styles};
-	`;
-
-	const grid4 = css`
-		left: 41.66667vw;
-		${grid1Styles};
-	`;
-
-	const grid5 = css`
-		left: 50vw;
-		${grid1Styles};
-	`;
-
-	const grid6 = css`
-		left: 58.33333vw;
-		${grid1Styles};
-	`;
-
-	const grid7 = css`
-		left: 75vw;
-		${grid1Styles};
-	`;
-
-	const grid8 = css`
-		left: 83.33333vw;
-		${grid1Styles};
-	`;
-
-	const grid9 = css`
-		left: 91.66667vw;
-		${grid1Styles};
-	`;
-
-	// grid large opacity styling
-
-	const gridLines2 = css`
-		position: fixed;
-		width: 100%;
-		top: 0;
-		left: 0;
-	`;
-
-	const grid10 = css`
-		position: absolute;
-		transform-origin: left;
-		height: 1px;
-		top: calc(var(--vh,1vh)*33.3333);
-		width: 100%;
-		background-color: red;
-	`;
-
-	const grid11 = css`
-		position: absolute;
-		transform-origin: left;
-		height: 1px;
-		top: calc(var(--vh,1vh)*66.6666);
-		width: 100vw;
-		background-color: red;
-	`;
-
-	const grid12 = css`
-		position: absolute;
-		transform-origin: top;
-		height: calc(var(--vh,1vh)*100);
-		width: 1px;
-		left: 33.33333vw;
-		background-color: red;
-	`;
-
-	const grid13 = css`
-		left: 66.66667vw;
-		position: absolute;
-		transform-origin: top;
-		height: calc(var(--vh,1vh)*100);
-		width: 1px;
-		background-color: red;
-	`;
-
-	// attempting to do box-shadow inset effect with 4 divs 
-
-	const lineStyles = css`
-		display: block;
-		position: absolute;
-		background-color: red;
-		transition: 0.35s ease-in;
-	`
-
-	const topLine = css`
-		transform: matrix(1,0,0,0,0,0);
-		${lineStyles};
-		top: 0;
-		transform-origin: top;
-		left: 0;
-		margin-top: -1px;
-		width: 100%;
-		height: 1px;
-	`;
-
-	const rightLine = css`
-		transform: matrix(0,0,0,1,0,0);
-		${lineStyles};
-		top: 0;
-		transform-origin: right;
-		left: 0;
-		margin-right: -1px;
-		height: 100%;
-		width: 1px;
-	`;
-
-	const leftLine = css`
-		transform: matrix(0,0,0,1,0,0);
-		${lineStyles};
-		top: 0;
-		transform-origin: left;
-		right: 0;
-		margin-left: -1px;
-		height: 100%;
-		width: 1px;
-	`;
-
-	const botLine = css`
-		transform: matrix(1,0,0,0,0,0);
-		${lineStyles};
-		bottom: 0;
-		transform-origin: bottom;
-		left: 0;
-		margin-bottom: -1px;
-		width: 100%;
-		height: 1px;
-	`;
-
-
-	
-
     return (
-        <div className={container}>
-			{/* <Box1 */}
-
-			<div className={box1}
+		// <div className={container}>
+		<Container>
+			<Box1
 				onMouseEnter={() => setStyle("rgba(222, 89, 152, 1)")}
 				onMouseOut={() => setStyle("rgba(0,0,0,1)")}
 				// onClick={() => setClickStyle("inset 0 0 0 100vw rgba(222, 89, 152, 1)", "rgba(222, 89, 152, 1)", "0")}
 				>
                 <img src= {Travis} alt="la flame"/>
-				<div className={topLine}></div>
-				<div className={rightLine}></div>
-				<div className={leftLine}></div>
-				<div className={botLine}></div>
-			</div>
-            {/* </Box1> */}
-			<div className={imgTitle1}>
-				{/* <ImgTitle1> */}
-					<span>Travis Scott</span>
-				{/* </ImgTitle1> */}
-			</div>
-			{/* <Box2 */}
-			<div className={box2}
+				<TopLine />
+				<RightLine />
+				<LeftLine />
+				<BotLine />
+            </Box1>
+			<ImgTitle1><span>Travis Scott</span></ImgTitle1>
+			<Box2
 				onMouseEnter={() => setStyle2("rgba(84, 86, 101, 1)")}
 				onMouseOut={() => setStyle2("rgba(0,0,0,1)")}
 				// onClick={() => setClickStyle2("inset 0 0 0 100vw rgba(84, 86, 101, 1)", "rgba(84, 86, 101, 1)")}
 			>
                 <img src= {Bryson} alt="bryson tiller"/>
-				<div className={topLine}></div>
-				<div className={rightLine}></div>
-				<div className={leftLine}></div>
-				<div className={botLine}></div>
-			</div>
-            {/* </Box2> */}
-			<div className={imgTitle2}>
-				{/* <ImgTitle2> */}
-					<span>Bryson Tiller</span>
-				{/* </ImgTitle2> */}
-			</div>
-			{/* <Box3 */}
-			<div className={box3}
+				<TopLine />
+				<RightLine />
+				<LeftLine />
+				<BotLine />
+            </Box2>
+			<ImgTitle2><span>Bryson Tiller</span></ImgTitle2>
+			<Box3
 				// onMouseEnter={() => setStyle3("rgba(100, 130, 66, 1)", "inset 0 0 0 20px rgba(100, 130, 66, 1)")}
 				// onMouseOut={() => setStyle3("rgba(0,0,0,1)", "inset 0 0 0 0 rgba(100, 130, 66, 0)")}
 				// onClick={() => setClickStyle3("inset 0 0 0 100vw rgba(100, 130, 66, 1)", "rgba(100, 130, 66, 1)")}
 			>
                 <img src= {Mura} alt="mura masa"/>
-				<div className={topLine}></div>
-				<div className={rightLine}></div>
-				<div className={leftLine}></div>
-				<div className={botLine}></div>
-			</div>
-            {/* </Box3> */}
-			{/* <ImgTitle3> */}
-			<div className={imgTitle3}>
-					<span>Mura Masa</span>
-			</div>
-			{/* </ImgTitle3> */}
-			{/* <Box4 */}
-			<div className={box4}
+				<TopLine />
+				<RightLine />
+				<LeftLine />
+				<BotLine />
+            </Box3>
+			<ImgTitle3><span>Mura Masa</span></ImgTitle3>
+			<Box4
 				// onMouseEnter={() => setStyle4("rgba(84, 86, 101, 1)", "inset 0 0 0 20px rgba(84, 86, 101, 1)")}
 				// onMouseOut={() => setStyle4("rgba(0,0,0,1)", "inset 0 0 0 0 rgba(84, 86, 101, 0)")}
 				// onClick={() => setClickStyle4("inset 0 0 0 100vw rgba(84, 86, 101, 1)", "rgba(84, 86, 101, 1)")}
 			>
                 <img src= {Anderson} alt="anderson paak"/>
-				<div className={topLine}></div>
-				<div className={rightLine}></div>
-				<div className={leftLine}></div>
-				<div className={botLine}></div>
-			</div>
-            {/* </Box4> */}
-			{/* <ImgTitle4> */}
-			<div className={imgTitle4}>
-					<span>Anderson Paak</span>
-			</div>
-			{/* </ImgTitle4> */}
-			{/* <Box5 */}
-			<div className={box5}
+				<TopLine />
+				<RightLine />
+				<LeftLine />
+				<BotLine />
+            </Box4>
+			<ImgTitle4><span>Anderson Paak</span></ImgTitle4>
+			<Box5
 				// onMouseEnter={() => setStyle5("rgba(254, 193, 100, 1)", "inset 0 0 0 20px rgba(254, 193, 100, 1)")}
 				// onMouseOut={() => setStyle5("rgba(0,0,0,1)", "inset 0 0 0 0 rgba(254, 193, 100, 0)")}
 				// onClick={() => setClickStyle5("inset 0 0 0 100vw rgba(254, 193, 100, 1)", "rgba(254, 193, 100, 1)")}
 			>
                 <img src= {Majid} alt="majid jordan"/>
-				<div className={topLine}></div>
-				<div className={rightLine}></div>
-				<div className={leftLine}></div>
-				<div className={botLine}></div>
-			</div>
-            {/* </Box5> */}
-			{/* <ImgTitle5> */}
-			<div className={imgTitle5}>
-					<span>Majid Jordan</span>
-			</div>
-			{/* </ImgTitle5> */}
-			{/* <Box6 */}
-			<div className={box6}
+				<TopLine />
+				<RightLine />
+				<LeftLine />
+				<BotLine />
+            </Box5>
+			<ImgTitle5><span>Majid Jordan</span></ImgTitle5>
+			<Box6
 				// onMouseEnter={() => setStyle6("rgba(239, 240, 198, 1)", "inset 0 0 0 20px rgba(239, 240, 198, 1)")}
 				// onMouseOut={() => setStyle6("rgba(0,0,0,1)", "inset 0 0 0 0 rgba(239, 240, 198, 0)")}
 				// onClick={() => setClickStyle6("inset 0 0 0 100vw rgba(239, 240, 198, 1)", "rgba(239, 240, 198, 1)")}
 			>
                 <img src= {Black} alt="6lack"/>
-				<div className={topLine}></div>
-				<div className={rightLine}></div>
-				<div className={leftLine}></div>
-				<div className={botLine}></div>
-			</div>
-            {/* </Box6> */}
-			{/* <ImgTitle6> */}
-			<div className={imgTitle6}>
-					<span>6lack</span>
-			</div>
-			{/* </ImgTitle6> */}
-			{/* <Box7 */}
-			<div className={box7}
+				<TopLine />
+				<RightLine />
+				<LeftLine />
+				<BotLine />
+            </Box6>
+			<ImgTitle6><span>6lack</span></ImgTitle6>
+			<Box7
 				// onMouseEnter={() => setStyle7("rgba(92, 145, 223, 1)", "inset 0 0 0 20px rgba(92, 145, 223, 1)")}
 				// onMouseOut={() => setStyle7("rgba(0,0,0,1)", "inset 0 0 0 0 rgba(92, 145, 223, 0)")}
 				// onClick={() => setClickStyle7("inset 0 0 0 100vw rgba(92, 145, 223, 1)", "rgba(92, 145, 223, 1)")}
 			>
                 <img src= {KK} alt="king krule"/>
-				<div className={topLine}></div>
-				<div className={rightLine}></div>
-				<div className={leftLine}></div>
-				<div className={botLine}></div>
-			</div>
-            {/* </Box7> */}
-			{/* <ImgTitle7> */}
-			<div className={imgTitle7}>
-					<span>King Krule</span>
-			</div>
-			{/* </ImgTitle7> */}
-			{/* <Box8 */}
-			<div className={box8}
+				<TopLine />
+				<RightLine />
+				<LeftLine />
+				<BotLine />
+            </Box7>
+			<ImgTitle7><span>King Krule</span></ImgTitle7>
+			<Box8
 				// onMouseEnter={() => setStyle8("rgba(84, 86, 101, 1)", "inset 0 0 0 20px rgba(84, 86, 101, 1)")}
 				// onMouseOut={() => setStyle8("rgba(0,0,0,1)", "inset 0 0 0 0 rgba(84, 86, 101, 0)")}
 				// onClick={() => setClickStyle8("inset 0 0 0 100vw rgba(84, 86, 101, 1)", "rgba(84, 85, 101, 1)")}
 			>
                 <img src= {Earl} alt="Earl Sweatshirt"/>
-				<div className={topLine}></div>
-				<div className={rightLine}></div>
-				<div className={leftLine}></div>
-				<div className={botLine}></div>
-			</div>
-            {/* </Box8> */}
-			{/* <ImgTitle8> */}
-			<div className={imgTitle8}>
-					<span>Earl Sweatshirt</span>
-			</div>
-			{/* </ImgTitle8> */}
-			{/* <Box9 */}
-			<div className={box9}
+				<TopLine />
+				<RightLine />
+				<LeftLine />
+				<BotLine />
+            </Box8>
+			<ImgTitle8><span>Earl Sweatshirt</span></ImgTitle8>
+			<Box9
 				// onMouseEnter={() => setStyle9("rgba(59, 61, 47, 1)", "inset 0 0 0 20px rgba(59, 61, 47, 1)")}
 				// onMouseOut={() => setStyle9("rgba(0,0,0,1)", "inset 0 0 0 0 rgba(59, 61, 47, 0)")}
 				// onClick={() => setClickStyle9("inset 0 0 0 100vw rgba(59, 61, 47, 1)", "rgba(59, 61, 47, 1)")}
 			>
                 <img src= {Vince} alt="Vince Staples"/>
-				<div className={topLine}></div>
-				<div className={rightLine}></div>
-				<div className={leftLine}></div>
-				<div className={botLine}></div>
-			</div>
-            {/* </Box9> */}
-			{/* <ImgTitle9> */}
-			<div className={imgTitle9}>
-					<span>Vince Staples</span>
-			</div>
-			{/* </ImgTitle9> */}
-			{/* <Box10 */}
-			<div className={box10}
+				<TopLine />
+				<RightLine />
+				<LeftLine />
+				<BotLine />
+            </Box9>
+			<ImgTitle9><span>Vince Staples</span></ImgTitle9>
+			<Box10
 				// onMouseEnter={() => setStyle10("rgba(81, 104, 112, 1)", "inset 0 0 0 20px rgba(81, 104, 112, 1)")}
 				// onMouseOut={() => setStyle10("rgba(0,0,0,1)", "inset 0 0 0 0 rgba(81, 104, 112, 0)")}
 				// onClick={() => setClickStyle10("inset 0 0 0 100vw rgba(81, 104, 112, 1)", "rgba(81, 104, 112, 1)")}
 			>
                 <img src= {Mac} alt="Mac Demarco"/>
-				<div className={topLine}></div>
-				<div className={rightLine}></div>
-				<div className={leftLine}></div>
-				<div className={botLine}></div>
-			</div>
-            {/* </Box10> */}
-			{/* <ImgTitle10> */}
-			<div className={imgTitle10}>
-					<span>Mac Demarco</span>
-			</div>
-			{/* </ImgTitle10> */}
-			{/* <Box11 */}
-			<div className={box11}
+				<TopLine />
+				<RightLine />
+				<LeftLine />
+				<BotLine />
+            </Box10>
+			<ImgTitle10><span>Mac Demarco</span></ImgTitle10>
+			<Box11
 				// onMouseEnter={() => setStyle11("rgba(255, 56, 240, 1)", "inset 0 0 0 20px rgba(255, 56, 240, 1)")}
 				// onMouseOut={() => setStyle11("rgba(0,0,0,1)", "inset 0 0 0 0 rgba(255, 56, 240, 0)")}
 				// onClick={() => setClickStyle11("inset 0 0 0 100vw rgba(255, 56, 240, 1)", "rgba(255, 56, 240, 1)")}
 			>
                 <img src= {Jcole} alt="J Cole"/>
-				<div className={topLine}></div>
-				<div className={rightLine}></div>
-				<div className={leftLine}></div>
-				<div className={botLine}></div>
-			</div>
-            {/* </Box11> */}
-			{/* <ImgTitle11> */}
-			<div className={imgTitle11}>
-					<span>J. Cole</span>
-			</div>
-			{/* </ImgTitle11> */}
-			{/* <Box12 */}
-			<div className={box12}
+				<TopLine />
+				<RightLine />
+				<LeftLine />
+				<BotLine />
+            </Box11>
+			<ImgTitle11><span>J. Cole</span></ImgTitle11>
+			<Box12
 				// onMouseEnter={() => setStyle12("rgba(106, 116, 115, 1)", "inset 0 0 0 20px rgba(106, 116, 115, 1)")}
 				// onMouseOut={() => setStyle12("rgba(0,0,0,1)", "inset 0 0 0 0 rgba(106, 116, 115, 0)")}
 				// onClick={() => setClickStyle12("inset 0 0 0 100vw rgba(106, 116, 115, 1)", "rgba(106, 116, 115, 1)")}
 
 			>
                 <img src= {Moses} alt="Moses Sumney"/>
-				<div className={topLine}></div>
-				<div className={rightLine}></div>
-				<div className={leftLine}></div>
-				<div className={botLine}></div>
-			</div>
-            {/* </Box12> */}
-			{/* <ImgTitle12> */}
-			<div className={imgTitle12}>
-					<span>Moses Sumney</span>
-			</div>
-			{/* </ImgTitle12> */}
-			<div className={nav}>
-				<ul className={navLinks}>
+				<TopLine />
+				<RightLine />
+				<LeftLine />
+				<BotLine />
+            </Box12>
+			<ImgTitle12><span>Moses Sumney</span></ImgTitle12>
+			<Nav>
+				<NavLinks>
 					<li><a href="#">Home</a></li>
 					<li><a href="#">Work</a></li>
 					<li><a href="#">About</a></li>
 					<li><a href="#">Contact</a></li>
-				</ul>
-			</div>
-			<div className={gridLines1}>
-				<div className={grid1}></div>
-				<div className={grid2}></div>
-				<div className={grid3}></div>
-				<div className={grid4}></div>
-				<div className={grid5}></div>
-				<div className={grid6}></div>
-				<div className={grid7}></div>
-				<div className={grid8}></div>
-				<div className={grid9}></div>
-			</div>
-			<div className={gridLines2}>
-				<div className={grid10}></div>
-				<div className={grid11}></div>
-				<div className={grid12}></div>
-				<div className={grid13}></div>
-			</div>
-
-		</div>
+				</NavLinks>
+			</Nav>
+			<GridLines1>
+				<Grid1></Grid1>
+				<Grid2></Grid2>
+				<Grid3></Grid3>
+				<Grid4></Grid4>
+				<Grid5></Grid5>
+				<Grid6></Grid6>
+				<Grid7></Grid7>
+				<Grid8></Grid8>
+				<Grid9></Grid9>
+			</GridLines1>
+			<GridLines2>
+				<Grid10></Grid10>
+				<Grid11></Grid11>
+				<Grid12></Grid12>
+				<Grid13></Grid13>
+			</GridLines2>
+		</Container>
     	)
     }
 
