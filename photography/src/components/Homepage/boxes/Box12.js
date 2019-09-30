@@ -7,9 +7,7 @@ const Box12 = styled.div`
 		transition: 0.4s ease-in;
 		overflow: hidden;
 		display: block;
-		left: 8.33vw;
-    	top: -74.97vw;
-    	width: 41.65vw;
+		width: inherit;
         :hover img {
 			transform: matrix(1.1, 0, 0, 1.1, 0, 0);
 		}

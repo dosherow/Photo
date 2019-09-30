@@ -1,15 +1,13 @@
 import styled from 'styled-components';
 
 const Box4 = styled.div`
-        position: relative;
+       position: relative;
 		height: auto;
 		cursor: pointer;
 		transition: 0.4s ease-in;
 		overflow: hidden;
 		display: block;
-		top: -8.333vw;
-    	left: 33.332vw;
-    	width: 33.332vw;
+		width: inherit;
         :hover img {
 			transform: matrix(1.1, 0, 0, 1.1, 0, 0);
 		}
